@@ -1,0 +1,26 @@
+"11:28:40 a.m., miércoles, 28 de octubre de 2020: Dolphin Smalltalk Professional started"!
+
+"11:29:32 a.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"11:29:35 a.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"11:31:07 a.m., miércoles, 28 de octubre de 2020: Dolphin Smalltalk Professional started"!
+
+!Remiseria methodsFor!
+todosLosChoferes
+"Retorna la lista de los choferes"
+^lista_chofer.! !
+!Remiseria categoriesFor: #todosLosChoferes!public! !
+
+!Remiseria methodsFor!
+todosLosClientes
+"Retorna la lista de clientes"
+^lista_clientes.! !
+!Remiseria categoriesFor: #todosLosClientes!public! !
+
+"11:33:51 a.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"11:33:54 a.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"11:33:57 a.m., miércoles, 28 de octubre de 2020: Image saved"!
+
