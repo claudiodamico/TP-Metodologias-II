@@ -1,0 +1,981 @@
+"11:28:40 a.m., miércoles, 28 de octubre de 2020: Dolphin Smalltalk Professional started"!
+
+"11:29:32 a.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"11:29:35 a.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"11:31:07 a.m., miércoles, 28 de octubre de 2020: Dolphin Smalltalk Professional started"!
+
+!Remiseria methodsFor!
+todosLosChoferes
+"Retorna la lista de los choferes"
+^lista_chofer.! !
+!Remiseria categoriesFor: #todosLosChoferes!public! !
+
+!Remiseria methodsFor!
+todosLosClientes
+"Retorna la lista de clientes"
+^lista_clientes.! !
+!Remiseria categoriesFor: #todosLosClientes!public! !
+
+"11:33:51 a.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"11:33:54 a.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"11:33:57 a.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"04:13:40 p.m., miércoles, 28 de octubre de 2020: Dolphin Smalltalk Professional started"!
+
+Object subclass: #Persona
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Persona guid: (GUID fromString: '{C6AE47F5-B04D-4702-99B2-8586C4DCD592}')!
+Persona comment: ''!
+!Persona categoriesForClass!Kernel-Objects! !
+Object subclass: #Persona
+	instanceVariableNames: 'nombre'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Persona
+	instanceVariableNames: 'nombre direccion'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Persona
+	instanceVariableNames: 'nombre direccion telefono'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Persona
+	instanceVariableNames: 'nombre direccion telefono dni'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Persona methodsFor!
+iniPersonaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni
+
+nombre:=unNombre.
+direccion:=unaDireccion.
+telefono:=unTelefono.
+dni:=unDni.! !
+!Persona categoriesFor: #iniPersonaNom:dir:tel:dni:!public! !
+
+!Persona methodsFor!
+iniPersonaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni
+"Inicializa una instancia de persona, sus clases hijos llamaran este metodo"
+nombre:=unNombre.
+direccion:=unaDireccion.
+telefono:=unTelefono.
+dni:=unDni.! !
+!Persona categoriesFor: #iniPersonaNom:dir:tel:dni:!public! !
+
+!Persona methodsFor!
+verNombre
+"Retorna el nombre de la persona"
+^nombre.! !
+!Persona categoriesFor: #verNombre!public! !
+
+!Persona methodsFor!
+verDireccion
+"Retorna la direccion de una persona"
+^direccion.! !
+!Persona categoriesFor: #verDireccion!public! !
+
+!Persona methodsFor!
+verTelefono
+"Retorna el telefono de una persona"
+^telefono.! !
+!Persona categoriesFor: #verTelefono!public! !
+
+!Persona methodsFor!
+verDni
+"Retorna el dni de una persona"
+^dni.! !
+!Persona categoriesFor: #verDni!public! !
+
+!Persona class methodsFor!
+crearPersonaNom: unNom ! !
+!Persona class categoriesFor: #crearPersonaNom:!public! !
+
+!Persona class methodsFor!
+crearPersonaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni
+
+^(self new ) iniPersonaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni.! !
+!Persona class categoriesFor: #crearPersonaNom:dir:tel:dni:!public! !
+
+Persona class removeSelector: #crearPersonaNom: ifAbsent: []!
+
+!Persona class methodsFor!
+crearPersonaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni
+"En duda probar si funciona asi o si no hace falta este metodo"
+^(self new ) iniPersonaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni.! !
+!Persona class categoriesFor: #crearPersonaNom:dir:tel:dni:!public! !
+
+!Persona methodsFor!
+modiNombre: unNom
+"Modifica el nombre de una persona"
+nombre:=unNom.! !
+!Persona categoriesFor: #modiNombre:!public! !
+
+!Persona methodsFor!
+modiDireccion: unaDir
+"Modifica la direccion de una persona"
+direccion:=unaDir.! !
+!Persona categoriesFor: #modiDireccion:!public! !
+
+!Persona methodsFor!
+modiTelefono: unTel
+"Mofica el telefono"
+telefono:=unTel.! !
+!Persona categoriesFor: #modiTelefono:!public! !
+
+Persona class removeSelector: #crearPersonaNom:dir:tel:dni: ifAbsent: []!
+
+Persona subclass: #Chofer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Chofer guid: (GUID fromString: '{76281269-866C-4DA9-98DC-C0BD467FD79B}')!
+Chofer comment: ''!
+!Chofer categoriesForClass!Kernel-Objects! !
+!Chofer class methodsFor!
+crearChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro
+
+^(self new) iniChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro.! !
+!Chofer class categoriesFor: #crearChoferNom:dir:tel:dni:cod:reg:!public! !
+
+!Chofer methodsFor!
+iniChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro
+super iniPersonaNom: unNombre dir: unaDireccion tel: unTelefono dni: unDni! !
+!Chofer categoriesFor: #iniChoferNom:dir:tel:dni:cod:reg:!public! !
+
+Persona subclass: #Chofer
+	instanceVariableNames: 'codigo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Persona subclass: #Chofer
+	instanceVariableNames: 'codigo disponible'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Persona subclass: #Chofer
+	instanceVariableNames: 'codigo disponible registro'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Chofer methodsFor!
+iniChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro
+super iniPersonaNom: unNombre dir: unaDireccion tel: unTelefono dni: unDni.
+codigo:=unCodigo.
+registro:=unRegistro.
+disponible:=true.
+! !
+!Chofer categoriesFor: #iniChoferNom:dir:tel:dni:cod:reg:!public! !
+
+c:= Chofer crearChoferNom: 'Pepe' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+
+c inspect.!
+
+|c |
+
+c:= Chofer crearChoferNom: 'Pepe' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+
+(c verNombre) inspect.!
+
+!Chofer methodsFor!
+verDisponibilidad
+"Retorna true si el chofer esta disponible"
+^disponible.! !
+!Chofer categoriesFor: #verDisponibilidad!public! !
+
+|c |
+
+c:= Chofer crearChoferNom: 'Pepe' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+
+(c verNombre) inspect.
+(c verDisponibilidad) inspect.!
+
+!Chofer methodsFor!
+verCodigo
+"Retorna el codigo del chofer"
+^codigo.! !
+!Chofer categoriesFor: #verCodigo!public! !
+
+!Chofer methodsFor!
+verRegistro
+"Retorna el registro del chofer"
+^registro.! !
+!Chofer categoriesFor: #verRegistro!public! !
+
+Persona subclass: #Cliente
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Cliente guid: (GUID fromString: '{71C341BF-6F5E-4E57-865F-0B2A4740A73A}')!
+Cliente comment: ''!
+!Cliente categoriesForClass!Kernel-Objects! !
+Persona subclass: #Cliente
+	instanceVariableNames: 'codigo_cliente'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Cliente class methodsFor!
+crearClienteNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo
+^(self new) iniClienteNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo.! !
+!Cliente class categoriesFor: #crearClienteNom:dir:tel:dni:cod:!public! !
+
+!Cliente methodsFor!
+iniClienteNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo
+super iniPersonaNom: unNombre dir: unaDireccion tel: unTelefono dni: unDni.
+codigo_cliente:=unCodigo.! !
+!Cliente categoriesFor: #iniClienteNom:dir:tel:dni:cod:!public! !
+
+!Chofer class methodsFor!
+crearChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro
+"Crea una instancia de chofer"
+^(self new) iniChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro.! !
+!Chofer class categoriesFor: #crearChoferNom:dir:tel:dni:cod:reg:!public! !
+
+!Cliente class methodsFor!
+crearClienteNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo
+"Crea una instancia de cliente"
+^(self new) iniClienteNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo.! !
+!Cliente class categoriesFor: #crearClienteNom:dir:tel:dni:cod:!public! !
+
+!Chofer class methodsFor!
+crearChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro
+"Retorna una instancia de chofer inicializada"
+^(self new) iniChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro.! !
+!Chofer class categoriesFor: #crearChoferNom:dir:tel:dni:cod:reg:!public! !
+
+!Chofer methodsFor!
+iniChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro
+"Crea una instancia de chofer"
+super iniPersonaNom: unNombre dir: unaDireccion tel: unTelefono dni: unDni.
+codigo:=unCodigo.
+registro:=unRegistro.
+disponible:=true.
+! !
+!Chofer categoriesFor: #iniChoferNom:dir:tel:dni:cod:reg:!public! !
+
+!Cliente methodsFor!
+iniClienteNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo
+"Inicializa una instancia de cliente"
+super iniPersonaNom: unNombre dir: unaDireccion tel: unTelefono dni: unDni.
+codigo_cliente:=unCodigo.! !
+!Cliente categoriesFor: #iniClienteNom:dir:tel:dni:cod:!public! !
+
+!Cliente class methodsFor!
+crearClienteNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo
+"Retorna una instancia inicializada de cliente"
+^(self new) iniClienteNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo.! !
+!Cliente class categoriesFor: #crearClienteNom:dir:tel:dni:cod:!public! !
+
+!Cliente methodsFor!
+verCodigoCliente
+"Retorna el codigo del cliente"
+^codigo_cliente.! !
+!Cliente categoriesFor: #verCodigoCliente!public! !
+
+Persona subclass: #Recepcionista
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Recepcionista guid: (GUID fromString: '{CA762A3F-4C55-4415-8E4B-0C7C7C63AFC6}')!
+Recepcionista comment: ''!
+!Recepcionista categoriesForClass!Kernel-Objects! !
+Persona subclass: #Recepcionista
+	instanceVariableNames: 'horario_laboral'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Persona subclass: #Recepcionista
+	instanceVariableNames: 'horario_laboral codigo_recep'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Recepcionista class methodsFor!
+crearRecepcionistaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo hora:unaHorario
+"Retorna una instancia de recepcionista inicializada"
+^(self new) iniRecepcionistaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo hora:unaHorario.! !
+!Recepcionista class categoriesFor: #crearRecepcionistaNom:dir:tel:dni:cod:hora:!public! !
+
+!Recepcionista methodsFor!
+iniRecepcionistaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo hora:unaHorario
+"Inicializa una instancia de recepcionista"
+super iniPersonaNom: unNombre dir: unaDireccion tel: unTelefono dni: unDni.
+codigo_recep:=unCodigo.
+horario_laboral:=unaHorario.! !
+!Recepcionista categoriesFor: #iniRecepcionistaNom:dir:tel:dni:cod:hora:!public! !
+
+!Recepcionista methodsFor!
+verCodigo_recep
+"Retorna el codigo de la recepcionista"
+^codigo_recep.! !
+!Recepcionista categoriesFor: #verCodigo_recep!public! !
+
+!Recepcionista methodsFor!
+verHorario
+"Retorna el horario laboral de la recepcionista"
+^horario_laboral.! !
+!Recepcionista categoriesFor: #verHorario!public! !
+
+!Recepcionista methodsFor!
+modiHorario: unHorario
+"Modofica el horario laboral"
+horario_laboral:=unHorario.! !
+!Recepcionista categoriesFor: #modiHorario:!public! !
+
+"05:52:51 p.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+|c cl r|
+
+c:= Chofer crearChoferNom: 'Pepe' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+
+(c verNombre) inspect.
+(c verDisponibilidad) inspect.
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'mi casa' tel: '42387458' dni: '78945217' cod: 01.
+cl inspect.
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'su casa' tel: '47841257' dni: '789456123' cod: 01 hora: '8 12'.
+r inspect.!
+
+|remi c cl r|
+
+
+c:= Chofer crearChoferNom: 'Pepe' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+
+(c verNombre) inspect.
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'mi casa' tel: '42387458' dni: '78945217' cod: 01.
+cl inspect.
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'su casa' tel: '47841257' dni: '789456123' cod: 01 hora: '8 12'.
+r inspect.
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+remi inspect. !
+
+!Remiseria methodsFor!
+agregarChofer: unChofer
+"Agrega un chofer a la remiseria"
+lista_chofer add: unChofer.! !
+!Remiseria categoriesFor: #agregarChofer:!public! !
+
+!Remiseria methodsFor!
+eliminarChofer: unChofer
+"Elimina un chofer de la remiseria"
+lista_chofer remove: unChofer.! !
+!Remiseria categoriesFor: #eliminarChofer:!public! !
+
+!Remiseria methodsFor!
+existeChofer: unChofer
+"Retorna true si el chofer existe en el remiseria, retorna false en caso contrario"
+lista_chofer includes: unChofer.! !
+!Remiseria categoriesFor: #existeChofer:!public! !
+
+!Remiseria methodsFor!
+agregarCliente: unCliente
+"Agrega un cliente a la remiseria"
+lista_clientes add: unCliente.! !
+!Remiseria categoriesFor: #agregarCliente:!public! !
+
+!Remiseria methodsFor!
+eliminarCliente: unCliente
+"Elimina un cliente de la remiseria"
+lista_clientes remove: unCliente.! !
+!Remiseria categoriesFor: #eliminarCliente:!public! !
+
+!Remiseria methodsFor!
+existeCliente: unCliente
+"Retorna true si existe el cliente en la remiseria, false en caso contrario"
+lista_clientes includes: unCliente.! !
+!Remiseria categoriesFor: #existeCliente:!public! !
+
+!Chofer methodsFor!
+modiDisponibilidad
+"Modifica el estado del chofer"
+disponible:= disponible not.! !
+!Chofer categoriesFor: #modiDisponibilidad!public! !
+
+!Chofer methodsFor!
+modiRegistro: unreg
+"Modifica el registro del chofer"
+registro:= unreg. ! !
+!Chofer categoriesFor: #modiRegistro:!public! !
+
+Persona subclass: #Chofer
+	instanceVariableNames: 'codigo disponible registro auto'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Chofer methodsFor!
+verAuto
+"Retorna auto"
+^auto.! !
+!Chofer categoriesFor: #verAuto!public! !
+
+!Chofer methodsFor!
+agregarAuto: unAuto
+"Agrega o modifica un auto al chofer"
+auto:=unAuto.! !
+!Chofer categoriesFor: #agregarAuto:!public! !
+
+Object subclass: #Auto
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Auto guid: (GUID fromString: '{18D22FD2-058F-493F-8753-033253D5886D}')!
+Auto comment: ''!
+!Auto categoriesForClass!Kernel-Objects! !
+Object subclass: #Auto
+	instanceVariableNames: 'patente'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Auto
+	instanceVariableNames: 'patente color'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Auto
+	instanceVariableNames: 'patente color modelo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Auto
+	instanceVariableNames: 'patente color modelo codigo_auto'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Auto class methodsFor!
+crearAutoPatente: unaPatente col:unColor mod:unModelo cod:unCodigo
+"Retorna una instancia de auto inicializada"
+^(self new) iniAutoPatente: unaPatente col:unColor mod:unModelo cod:unCodigo.! !
+!Auto class categoriesFor: #crearAutoPatente:col:mod:cod:!public! !
+
+!Auto methodsFor!
+iniAutoPatente: unaPatente col:unColor mod:unModelo cod:unCodigo
+"Inicializa una instancia de auto"
+patente:=unaPatente.
+color:=unColor.
+modelo:=unModelo.
+codigo_auto:=unCodigo.! !
+!Auto categoriesFor: #iniAutoPatente:col:mod:cod:!public! !
+
+!Auto methodsFor!
+verPatente
+"Retorna la patente del auto"
+^patente.! !
+!Auto categoriesFor: #verPatente!public! !
+
+!Auto methodsFor!
+verColor
+"Retorna el color del auto"
+^color.! !
+!Auto categoriesFor: #verColor!public! !
+
+!Auto methodsFor!
+verModelo
+"Retorna el modelo del auto"
+^modelo.! !
+!Auto categoriesFor: #verModelo!public! !
+
+!Auto methodsFor!
+verCodigo_auto
+"Retorna el codigo del auto"
+^codigo_auto.! !
+!Auto categoriesFor: #verCodigo_auto!public! !
+
+!Auto methodsFor!
+modiColor: unColor
+"Modifica el color del auto en caso de que sea pintado"
+color:=unColor.! !
+!Auto categoriesFor: #modiColor:!public! !
+
+"07:06:09 p.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+Persona subclass: #Recepcionista
+	instanceVariableNames: 'horario_laboral codigo_recep agenda'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Recepcionista methodsFor!
+agregarAgenda: unaAgenda
+"Agrega una agenda a recepcionista"
+agenda:=unaAgenda.! !
+!Recepcionista categoriesFor: #agregarAgenda:!public! !
+
+!Recepcionista methodsFor!
+verAgenda
+"Retorna agenda"
+^agenda.! !
+!Recepcionista categoriesFor: #verAgenda!public! !
+
+Object subclass: #Agenda
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Agenda guid: (GUID fromString: '{67691D7D-7512-464E-848C-93743BF88BFF}')!
+Agenda comment: ''!
+!Agenda categoriesForClass!Kernel-Objects! !
+Object subclass: #Agenda
+	instanceVariableNames: 'viaje'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Agenda
+	instanceVariableNames: 'viaje reserva'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Agenda
+	instanceVariableNames: 'viaje reserva codigo_agenda'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Agenda class methodsFor!
+crearAgendaCod: unCodigo
+"Retorna una instancia de agenda inicializada"
+^(self new) iniAgendaCod: unCodigo.! !
+!Agenda class categoriesFor: #crearAgendaCod:!public! !
+
+!Agenda methodsFor!
+iniAgendaCod: unCodigo
+"Inicializa una instancia de agenda"
+codigo_agenda:=unCodigo.! !
+!Agenda categoriesFor: #iniAgendaCod:!public! !
+
+Object subclass: #Agenda
+	instanceVariableNames: 'lista_viajes reserva codigo_agenda'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Agenda
+	instanceVariableNames: 'lista_viajes codigo_agenda'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Agenda
+	instanceVariableNames: 'codigo_agenda'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Agenda
+	instanceVariableNames: 'codigo_agenda lista_viajes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Agenda
+	instanceVariableNames: 'codigo_agenda lista_viajes lista_reservas'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Agenda methodsFor!
+iniAgendaCod: unCodigo
+"Inicializa una instancia de agenda"
+codigo_agenda:=unCodigo.
+lista_viajes:= OrderedCollection new.
+lista_reservas:= OrderedCollection new.! !
+!Agenda categoriesFor: #iniAgendaCod:!public! !
+
+!Agenda methodsFor!
+verCodigo_agenda
+"Retorna el codigo de la agenda"
+^codigo_agenda.! !
+!Agenda categoriesFor: #verCodigo_agenda!public! !
+
+!Agenda methodsFor!
+agregarViaje: unViaje
+"Agrega un viaje a la agenda"
+lista_viajes add: unViaje.! !
+!Agenda categoriesFor: #agregarViaje:!public! !
+
+!Agenda methodsFor!
+eliminarViaje: unViaje
+"Elimina un viaje de la agenda"
+lista_viajes remove: unViaje.! !
+!Agenda categoriesFor: #eliminarViaje:!public! !
+
+!Agenda methodsFor!
+existeViaje: unViaje
+"Retorna true si el viaje esta en la agenda, false en caso contrario"
+^ lista_viajes includes: unViaje.! !
+!Agenda categoriesFor: #existeViaje:!public! !
+
+!Remiseria methodsFor!
+existeChofer: unChofer
+"Retorna true si el chofer existe en el remiseria, retorna false en caso contrario"
+^lista_chofer includes: unChofer.! !
+!Remiseria categoriesFor: #existeChofer:!public! !
+
+!Remiseria methodsFor!
+existeCliente: unCliente
+"Retorna true si existe el cliente en la remiseria, false en caso contrario"
+^lista_clientes includes: unCliente.! !
+!Remiseria categoriesFor: #existeCliente:!public! !
+
+!Agenda methodsFor!
+agregarReserva: unaReserva
+"Agrega una reserva a la agenda"
+lista_reservas add: unaReserva.! !
+!Agenda categoriesFor: #agregarReserva:!public! !
+
+!Agenda methodsFor!
+eliminarReserva: unaReserva
+"Elimina una reserva de la agenda"
+lista_reservas remove: unaReserva.! !
+!Agenda categoriesFor: #eliminarReserva:!public! !
+
+!Agenda methodsFor!
+existeReserva: unaReserva
+"Retorna true si la reserva esta en la agenda, false en caso contrario"
+^lista_reservas includes: unaReserva.! !
+!Agenda categoriesFor: #existeReserva:!public! !
+
+Object subclass: #Viaje
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Viaje guid: (GUID fromString: '{E03F36D0-4DD3-4739-95B5-18145BE9533D}')!
+Viaje comment: ''!
+!Viaje categoriesForClass!Kernel-Objects! !
+Object subclass: #Viaje
+	instanceVariableNames: 'codigo_viaje'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Viaje
+	instanceVariableNames: 'codigo_viaje fecha'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Viaje
+	instanceVariableNames: 'codigo_viaje fecha hora'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Viaje
+	instanceVariableNames: 'codigo_viaje fecha hora destino'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Viaje
+	instanceVariableNames: 'codigo_viaje fecha hora destino importe'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Viaje
+	instanceVariableNames: 'codigo_viaje fecha hora destino importe cliente'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Viaje
+	instanceVariableNames: 'codigo_viaje fecha hora destino importe cliente chofer'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Viaje class methodsFor!
+crearViajeCod: unCodigo fecha: unaFecha hora: unaHora destino: unDestino import: unImporte
+"Retorna una instancia de viaje inicializada"
+^(self new) iniViajeCod:  unCodigo fecha: unaFecha hora: unaHora destino: unDestino import: unImporte.! !
+!Viaje class categoriesFor: #crearViajeCod:fecha:hora:destino:import:!public! !
+
+!Viaje methodsFor!
+iniViajeCod:  unCodigo fecha: unaFecha hora: unaHora destino: unDestino import: unImporte
+"Inicializa una instancia de viaje"
+codigo_viaje:=unCodigo.
+fecha:=unaFecha.
+hora:=unaHora.
+destino:=unDestino.
+importe:=unImporte.! !
+!Viaje categoriesFor: #iniViajeCod:fecha:hora:destino:import:!public! !
+
+!Viaje class methodsFor!
+crearViajeCod: unCodigo fecha: unaFecha hora: unaHora destino: unDestino import: unImporte cli:unCliente cho:unChofer
+"Retorna una instancia de viaje inicializada"
+^(self new) iniViajeCod:  unCodigo fecha: unaFecha hora: unaHora destino: unDestino import: unImporte cli:unCliente cho:unChofer .! !
+!Viaje class categoriesFor: #crearViajeCod:fecha:hora:destino:import:cli:cho:!public! !
+
+!Viaje methodsFor!
+iniViajeCod:  unCodigo fecha: unaFecha hora: unaHora destino: unDestino import: unImporte cli:unCliente cho:unChofer
+"Inicializa una instancia de viaje"
+codigo_viaje:=unCodigo.
+fecha:=unaFecha.
+hora:=unaHora.
+destino:=unDestino.
+importe:=unImporte.
+cliente:=unCliente.
+chofer:=unChofer. ! !
+!Viaje categoriesFor: #iniViajeCod:fecha:hora:destino:import:cli:cho:!public! !
+
+Viaje removeSelector: #iniViajeCod:fecha:hora:destino:import: ifAbsent: []!
+
+!Viaje methodsFor!
+verCodigo_viaje
+"Retorna el codigo del viaje"
+^codigo_viaje.! !
+!Viaje categoriesFor: #verCodigo_viaje!public! !
+
+!Viaje methodsFor!
+verFecha
+"Retorna la fecha del viaje"
+^fecha. ! !
+!Viaje categoriesFor: #verFecha!public! !
+
+!Viaje methodsFor!
+verHora
+"Retorna la hora del viaje"
+^hora. ! !
+!Viaje categoriesFor: #verHora!public! !
+
+!Viaje methodsFor!
+verDestino
+"Retorna el destino del viaje"
+^destino. ! !
+!Viaje categoriesFor: #verDestino!public! !
+
+!Viaje methodsFor!
+verImporte
+"Retorna el importe del viaje"
+^importe. ! !
+!Viaje categoriesFor: #verImporte!public! !
+
+!Viaje methodsFor!
+verCliente
+"Retorna el cliente"
+^cliente. ! !
+!Viaje categoriesFor: #verCliente!public! !
+
+!Viaje methodsFor!
+verChofer
+"Retorna el chofer del viaje"
+^chofer. ! !
+!Viaje categoriesFor: #verChofer!public! !
+
+!Viaje methodsFor!
+verCliente
+"Retorna el cliente del viaje"
+^cliente. ! !
+!Viaje categoriesFor: #verCliente!public! !
+
+!Viaje methodsFor!
+modiFecha: unaFecha
+"Modifica la fecha del viaje"
+fecha:=unaFecha. ! !
+!Viaje categoriesFor: #modiFecha:!public! !
+
+!Viaje methodsFor!
+modiFecha: unaFecha
+"Modifica la fecha del viaje"
+fecha:= unaFecha. ! !
+!Viaje categoriesFor: #modiFecha:!public! !
+
+!Viaje methodsFor!
+modiHora: unaHora
+"Mofifica la hora del viaje"
+hora:= unaHora.! !
+!Viaje categoriesFor: #modiHora:!public! !
+
+!Viaje methodsFor!
+modiDestino: unDestino
+"Modifica el destino del viaje"
+destino:= unDestino.! !
+!Viaje categoriesFor: #modiDestino:!public! !
+
+!Viaje methodsFor!
+modiDestino: unDestino
+"Modifica el destino del viaje"
+destino:= unDestino.! !
+!Viaje categoriesFor: #modiDestino:!public! !
+
+!Viaje methodsFor!
+modiImporte: unImporte
+"Modifica el importe de un viaje"
+importe:=unImporte. ! !
+!Viaje categoriesFor: #modiImporte:!public! !
+
+!Viaje methodsFor!
+modiCliente: unCliente
+"Modifica el cliente del viaje"
+cliente:= unCliente. ! !
+!Viaje categoriesFor: #modiCliente:!public! !
+
+!Viaje methodsFor!
+modiChofer: unChofer
+"Modifica un chofer del viaje"
+chofer:=unChofer. ! !
+!Viaje categoriesFor: #modiChofer:!public! !
+
+!Viaje methodsFor!
+modiChofer: unChofer
+"Modifica un chofer del viaje"
+chofer:=unChofer. ! !
+!Viaje categoriesFor: #modiChofer:!public! !
+
+Object subclass: #Reserva
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Reserva guid: (GUID fromString: '{AA4F9A87-EEA6-4B9E-9A1F-86B906119546}')!
+Reserva comment: ''!
+!Reserva categoriesForClass!Kernel-Objects! !
+Object subclass: #Reserva
+	instanceVariableNames: 'codigo_reserva'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Reserva
+	instanceVariableNames: 'codigo_reserva hora_reserva'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Reserva
+	instanceVariableNames: 'codigo_reserva hora_reserva destino'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Reserva
+	instanceVariableNames: 'codigo_reserva hora_reserva destino fecha'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Reserva
+	instanceVariableNames: 'codigo_reserva hora_reserva destino fecha cliente'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Reserva class methodsFor!
+crearReservaCod: unCodigo hora: unaHora fecha: unaFecha dest: unDestino cliente: unCliente
+"Retorna una instancia de reserva inicializada"
+^ (self new) iniReservaCod: unCodigo hora: unaHora fecha: unaFecha dest: unDestino cliente: unCliente.! !
+!Reserva class categoriesFor: #crearReservaCod:hora:fecha:dest:cliente:!public! !
+
+!Reserva methodsFor!
+iniReservaCod: unCodigo hora: unaHora fecha: unaFecha dest: unDestino cliente: unCliente
+"Inicializa una instancia de reserva"
+codigo_reserva:=unCodigo.
+hora_reserva:=unaHora.
+destino:=unDestino.
+fecha:=unaFecha.
+cliente:=unCliente. ! !
+!Reserva categoriesFor: #iniReservaCod:hora:fecha:dest:cliente:!public! !
+
+!Reserva methodsFor!
+verCodigoReserva
+"Retorna el codigo de la reserva"
+^codigo_reserva.! !
+!Reserva categoriesFor: #verCodigoReserva!public! !
+
+!Reserva methodsFor!
+verHoraReserva
+"Retorna la hora de la reserva"
+^hora_reserva. ! !
+!Reserva categoriesFor: #verHoraReserva!public! !
+
+!Reserva methodsFor!
+verDestino
+"Retorna  el destino de la reserva"
+^destino. ! !
+!Reserva categoriesFor: #verDestino!public! !
+
+!Reserva methodsFor!
+verFecha
+"Retorna la fecha de la reserva"
+^fecha. ! !
+!Reserva categoriesFor: #verFecha!public! !
+
+!Reserva methodsFor!
+verCliente
+"Retorna el cliente de la reserva"
+^cliente. ! !
+!Reserva categoriesFor: #verCliente!public! !
+
+!Reserva methodsFor!
+modiHoraReserva: unaHora
+"Modifica la hora de la reserva"
+hora_reserva:=unaHora. ! !
+!Reserva categoriesFor: #modiHoraReserva:!public! !
+
+!Reserva methodsFor!
+modiHoraReserva: unaHora
+"Modifica la hora de la reserva"
+hora_reserva:= unaHora. ! !
+!Reserva categoriesFor: #modiHoraReserva:!public! !
+
+!Reserva methodsFor!
+modiDestino: unDestino
+"Modifica el destino de una reserva"
+destino:=unDestino. ! !
+!Reserva categoriesFor: #modiDestino:!public! !
+
+!Reserva methodsFor!
+modiFecha: unaFecha
+"Modifica la fecha de una reserva"
+fecha:= unaFecha. ! !
+!Reserva categoriesFor: #modiFecha:!public! !
+
+!Reserva methodsFor!
+modiCliente: unCliente
+"Modifica el cliente que hace la reserva"
+cliente:= unCliente. ! !
+!Reserva categoriesFor: #modiCliente:!public! !
+
+"09:12:00 p.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"09:12:20 p.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"09:12:40 p.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"09:12:58 p.m., miércoles, 28 de octubre de 2020: Image saved"!
+
+"09:13:01 p.m., miércoles, 28 de octubre de 2020: Image saved"!
+
