@@ -1246,3 +1246,15 @@ r inspect.
 remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
 remi inspect. !
 
+!Recepcionista class methodsFor!
+crearRecepcionistaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo hora:unaHorario
+"Retorna una instancia de recepcionista inicializada"
+^(self new) iniRecepcionistaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo hora:unaHorario.! !
+!Recepcionista class categoriesFor: #crearRecepcionistaNom:dir:tel:dni:cod:hora:!public! !
+
+!Recepcionista methodsFor!
+modiHorario: unHorario
+"Modifica el horario laboral"
+horario_laboral:=unHorario.! !
+!Recepcionista categoriesFor: #modiHorario:!public! !
+
