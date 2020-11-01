@@ -1,0 +1,48 @@
+12:50:21 a.m., domingo, 01 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('TranscriptShell does not understand #showAllColorSymbol')
+
+TranscriptShell(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+----------------------------------------------------------------------------------------------------
+
+01:29:40 a.m., domingo, 01 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #agregarChofer:')
+
+Object>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+----------------------------------------------------------------------------------------------------
+
