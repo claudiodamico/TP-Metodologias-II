@@ -1614,3 +1614,27 @@ cr.!
 
 "01:51:49 a.m., domingo, 01 de noviembre de 2020: Image saved"!
 
+"04:25:30 p.m., domingo, 01 de noviembre de 2020: Dolphin Smalltalk Professional started"!
+
+"05:41:37 p.m., domingo, 01 de noviembre de 2020: Image saved"!
+
+!Persona methodsFor!
+modiTelefono: unTel
+"Modifica el telefono"
+telefono:=unTel.! !
+!Persona categoriesFor: #modiTelefono:!public! !
+
+"06:28:54 p.m., domingo, 01 de noviembre de 2020: Image saved"!
+
+!Recepcionista methodsFor!
+modiHorario: unHorario
+"Modifica el horario laboral"
+horario_laboral:=unHorario.! !
+!Recepcionista categoriesFor: #modiHorario:!public! !
+
+"06:35:55 p.m., domingo, 01 de noviembre de 2020: Image saved"!
+
+"06:36:01 p.m., domingo, 01 de noviembre de 2020: Image saved"!
+
+"06:36:04 p.m., domingo, 01 de noviembre de 2020: Image saved"!
+
