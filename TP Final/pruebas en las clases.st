@@ -1,42 +1,54 @@
-|remi c c2 c3 cl r|
+|remi c cl r a n d t dn co re ch col1 aut|
 
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+aut1:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+aut2:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+c1:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c1 agregarAuto: aut1 .
+c2:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c2 agregarAuto: aut2 . 
 
-c:= Chofer crearChoferNom: 'Pepe' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
 
-(c verNombre) inspect.
-
-cl:= Cliente crearClienteNom: 'Nico' dir: 'mi casa' tel: '42387458' dni: '78945217' cod: 01.
-cl inspect.
-
-r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'su casa' tel: '47841257' dni: '789456123' cod: 01 hora: '8 12'.
-r inspect.
-
-remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
-remi inspect. 
-
-c2:= Chofer crearChoferNom: 'Leandro' dir: 'Calle varela 763' tel: '11231415156' dni: '40123213124' cod: 02 reg: 'profesional'.
-(c2 verNombre) inspect.
-
-cl:= Cliente crearClienteNom: 'enzo' dir: 'mi casa' tel: '455123' dni: '1235678' cod: 02.
-cl inspect.
-
-r:= Recepcionista crearRecepcionistaNom: 'carmen' dir: 'su casa' tel: '4457893' dni: '789234234' cod: 02 hora: '10 12'.
-r inspect.
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
 
 remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
-remi inspect. 
+remi agregarChofer: c. 
+remi agregarChofer: c1.
+remi agregarChofer: c2. 
 
 
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+cl1:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+cl2:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl.
+remi agregarCliente: cl1.
+remi agregarCliente: cl2. 
 
-c3:= Chofer crearChoferNom: 'Leandro' dir: 'Calle varela 763' tel: '11231415156' dni: '40123213124' cod: 03 reg: 'profesional'.
-(c3 verNombre) inspect.
+remi inspect.
 
-c:= Cliente crearClienteNom: 'marcelo' dir: 'mi casa' tel: '41234123' dni: '1231235466' cod: 03.
-cl inspect.
+"1 to: 3 do: [:i| n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ]. "
 
-r:= Recepcionista crearRecepcionistaNom: 'julieta' dir: 'su casa' tel: '4457893' dni: '789234234' cod: 03 hora: '12 12'.
-r inspect.
+"1 to: 3 do: [:i| n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+			
+			cl:= Cliente crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ]. "
 
-remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
-remi inspect. 
-
+col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i| (col1 at: i) verNombre inspect ].
+			
