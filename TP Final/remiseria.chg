@@ -1638,3 +1638,1042 @@ horario_laboral:=unHorario.! !
 
 "06:36:04 p.m., domingo, 01 de noviembre de 2020: Image saved"!
 
+"01:52:24 p.m., martes, 03 de noviembre de 2020: Dolphin Smalltalk Professional started"!
+
+"03:32:19 p.m., martes, 03 de noviembre de 2020: Image saved"!
+
+| op n d t dn co re ch remi col1 cl col2 |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=5] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ].].
+
+(op=4) ifTrue: [ col2:= remi todosLosClientes.
+1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. ].
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=5] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ].].
+
+(op=4) ifTrue: [ col2:= remi todosLosClientes.
+1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. ].
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=5] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ].].
+
+(op=4) ifTrue: [ "col2:= remi todosLosClientes."
+"1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
+col2:= remi todosLosClientes  collect: [:each | each verNombre ]. ].
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=5] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ].].
+
+(op=4) ifTrue: [ "col2:= remi todosLosClientes."
+"1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
+col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre printString  ; cr) ].  ].
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=5] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ].].
+
+(op=4) ifTrue: [ "col2:= remi todosLosClientes."
+"1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
+col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre printString ) ].  ].
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=5] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ].].
+
+(op=4) ifTrue: [ "col2:= remi todosLosClientes."
+"1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
+col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre, '---' printString ) ].  ].
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=5] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString, '---';cr ].].
+
+(op=4) ifTrue: [ "col2:= remi todosLosClientes."
+"1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
+col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre, '---' printString ); cr ].  ].
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=5] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ]. Transcript  cr .].
+
+(op=4) ifTrue: [ "col2:= remi todosLosClientes."
+"1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
+col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre printString ); cr ].  ].
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=5] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ]. Transcript  cr .].
+
+(op=4) ifTrue: [ "col2:= remi todosLosClientes."
+"1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
+col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre printString ); cr ]. 
+Transcript show: '----------------------------------------------------------------------------------';cr. ].
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=5] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ]. Transcript show: '----------------------------------------------------------------------------------';cr.].
+
+(op=4) ifTrue: [ "col2:= remi todosLosClientes."
+"1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
+col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre printString ); cr ]. 
+Transcript show: '----------------------------------------------------------------------------------';cr. ].
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=5] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ Transcript show: ' Choferes cargados en el sistema: ';cr.
+ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ]. Transcript show: '----------------------------------------------------------------------------------';cr.].
+
+(op=4) ifTrue: [ "col2:= remi todosLosClientes."
+"1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
+Transcript show: ' Clientes  cargados en el sistema: ';cr.
+col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre printString ); cr ]. 
+Transcript show: '----------------------------------------------------------------------------------';cr. ].
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+"03:54:49 p.m., martes, 03 de noviembre de 2020: Image saved"!
+
+!Remiseria methodsFor!
+choferDisponible
+|cho | 
+"Metodo para buscar un chofer disponible para asignar a un viaje"
+^(cho:=(self todosLosChoferes) detect: [:each |  each verDisponibilidad = true ]).! !
+!Remiseria categoriesFor: #choferDisponible!public! !
+
+"04:00:49 p.m., martes, 03 de noviembre de 2020: Image saved"!
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+c modiDisponibilidad. 
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Imprimir un chofer disponible';
+cr;
+show: ' 6. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=6] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ Transcript show: ' Choferes cargados en el sistema: ';cr.
+ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ]. Transcript show: '----------------------------------------------------------------------------------';cr.].
+
+(op=4) ifTrue: [ "col2:= remi todosLosClientes."
+"1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
+Transcript show: ' Clientes  cargados en el sistema: ';cr.
+col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre printString ); cr ]. 
+Transcript show: '----------------------------------------------------------------------------------';cr. ].
+
+(op=5) ifTrue: [ Transcript  show: 'Primer chofer disponoble encontrado: '; cr;
+ show: remi choferDisponible verNombre printString ; cr.]. 
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. 
+!
+
+| op n d t dn co re ch remi col1 cl col2 aut c |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+c modiDisponibilidad. 
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: ' Remiseria ';
+show: remi verNombre printString;
+cr.
+
+Transcript show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Imprimir choferes'; 
+cr;
+show: ' 4. Imprimir clientes';
+cr;
+show: ' 5. Imprimir un chofer disponible';
+cr;
+show: ' 6. Salir';
+cr. 
+
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
+[op ~=6] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch ].
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ].
+
+(op=3) ifTrue: [ Transcript show: ' Choferes cargados en el sistema: ';cr.
+ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: (col1 at: i)  verNombre printString;cr ]. Transcript show: '----------------------------------------------------------------------------------';cr.].
+
+(op=4) ifTrue: [ "col2:= remi todosLosClientes."
+"1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
+Transcript show: ' Clientes  cargados en el sistema: ';cr.
+col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre printString ); cr ]. 
+Transcript show: '----------------------------------------------------------------------------------';cr. ].
+
+(op=5) ifTrue: [ Transcript  show: 'Primer chofer disponoble encontrado: '; cr;
+ show: remi choferDisponible verNombre printString ; cr.]. 
+op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. !
+
+"04:36:18 p.m., martes, 03 de noviembre de 2020: Image saved"!
+
+"04:36:31 p.m., martes, 03 de noviembre de 2020: Image saved"!
+
+MessageBox warning: 'El numero ingresado es incorrecto'!
+
+sigue:= MessageBox confirm: '¿Desea seguir ingresando datos?'!
+
+"04:39:43 p.m., martes, 03 de noviembre de 2020: Image saved"!
+
+"04:39:50 p.m., martes, 03 de noviembre de 2020: Image saved"!
+
