@@ -1,4 +1,4 @@
-| op n d t dn co re ch remi col1 cl col2 aut c |
+| op n d t dn co re ch remi col1 cl col2 aut c cliente|
 
 r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
 
@@ -48,11 +48,13 @@ show: ' 4. Imprimir clientes';
 cr;
 show: ' 5. Imprimir un chofer disponible';
 cr;
-show: ' 6. Salir';
+show: ' 6. Cargar un viaje';
+cr;
+show: ' 7. Salir';
 cr. 
 
 op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
-[op ~=6] whileTrue: [ 
+[op ~=7] whileTrue: [ 
 (op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
 			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
 			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
@@ -78,10 +80,32 @@ op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
 (op=4) ifTrue: [ "col2:= remi todosLosClientes."
 "1 to: col2 size do: [:i|Transcript show: (col2 at: i)  verNombre printString;cr ]. " 
 Transcript show: ' Clientes  cargados en el sistema: ';cr.
-col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre printString ); cr ]. 
+col2:= remi todosLosClientes  collect: [:each | Transcript show: (each verNombre printString , each verCodigoCliente printString ); cr ]. 
 Transcript show: '----------------------------------------------------------------------------------';cr. ].
 
 (op=5) ifTrue: [ Transcript  show: 'Primer chofer disponoble encontrado: '; cr;
  show: remi choferDisponible verNombre printString ; cr.]. 
+
+(op=6) ifTrue: [ codCliente:= (Prompter prompt: ' Ingrese el codigo del cliente para el viaje: ') asNumber .
+cliente:= remi buscarClienteCod: codCliente. 
+(cliente ~= nil ) ifTrue: [ cod:=Prompter prompt: ' Ingrese el codigo del viaje'.
+fech:= Prompter prompt: ' Ingrese la fecha del viaje: '.
+hs:= Prompter prompt: ' Ingrese la hora del viaje: '.
+des:= Prompter prompt: ' Ingrese el destino del viaje: '.
+imp:= Prompter prompt: ' Ingrese el importe: '.
+ch:= remi choferDisponible. 
+v:= Viaje crearViajeCod: cod fecha: fech hora: hs destino: des import: imp cli: cliente cho: ch . 
+Transcript show: ' se registro bien el viaje'  ] ifFalse: [ Transcript show: ' El cliente no esta registrado en el sistema'; cr .
+MessageBox warning: 'El cliente no esta registrado en el sistema'.
+registrarlo:= MessageBox confirm: '¿Desea ingresar un nuevo cliente?'. (registrarlo=true) ifTrue: [Transcript show: 'Ingrese un nuevo cliente'; cr.
+			n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl ] ] .
+] .
 op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. 
 
