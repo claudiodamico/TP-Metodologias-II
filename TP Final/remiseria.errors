@@ -262,3 +262,27 @@ BlockClosure>>ifCurtailed:
 BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
+05:34:36 p.m., martes, 10 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Recepcionista does not understand #choferesEnViaje')
+
+Recepcionista(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+----------------------------------------------------------------------------------------------------
+

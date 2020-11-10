@@ -1,4 +1,4 @@
-| op n d t dn co re ch remi col1 cl col2 aut c cliente|
+| op n d t dn co re ch remi col1 cl col2 col aut c cliente |
 
 r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
 
@@ -50,11 +50,17 @@ show: ' 5. Imprimir un chofer disponible';
 cr;
 show: ' 6. Cargar un viaje';
 cr;
-show: ' 7. Salir';
+show: ' 7. ver diccionario';
+cr;
+show: ' 8. verchoferes ocupados en viaje' ;
+cr;
+show: ' 9. viajes a capital' ;
+cr;
+show: ' 10. Salir' ;
 cr. 
 
 op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber.
-[op ~=7] whileTrue: [ 
+[op ~=10] whileTrue: [ 
 (op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
 			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
 			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
@@ -94,8 +100,9 @@ hs:= Prompter prompt: ' Ingrese la hora del viaje: '.
 des:= Prompter prompt: ' Ingrese el destino del viaje: '.
 imp:= Prompter prompt: ' Ingrese el importe: '.
 ch:= remi choferDisponible. 
-v:= Viaje crearViajeCod: cod fecha: fech hora: hs destino: des import: imp cli: cliente cho: ch . 
-Transcript show: ' se registro bien el viaje'  ] ifFalse: [ Transcript show: ' El cliente no esta registrado en el sistema'; cr .
+v:= Viaje crearViajeCod: cod dia: fech hora: hs destino: des import: imp cli: cliente cho: ch . 
+a agregarViaje: v. 
+Transcript show: ' se registro bien el viaje' ;cr  ] ifFalse: [ Transcript show: ' El cliente no esta registrado en el sistema'; cr .
 MessageBox warning: 'El cliente no esta registrado en el sistema'.
 registrarlo:= MessageBox confirm: '¿Desea ingresar un nuevo cliente?'. (registrarlo=true) ifTrue: [Transcript show: 'Ingrese un nuevo cliente'; cr.
 			n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
@@ -107,5 +114,10 @@ registrarlo:= MessageBox confirm: '¿Desea ingresar un nuevo cliente?'. (registra
 			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
 			remi agregarCliente: cl ] ] .
 ] .
+(op=7) ifTrue: [ a cantidadViajesXdia ] . 
+(op=8) ifTrue: [ col:= remi choferesEnViaje collect: [:each | Transcript  show: ( each verNombre printString , (each verAuto) verModelo printString) ;cr ]. 
+	] . 
+(op=9) ifTrue: [ col:=a seleccionarViajesACapital collect: [:each | Transcript show: ( (each verCliente) verNombre printString , each verImporte printString) ; cr ] ]. 
+
 op:= (Prompter prompt: ' Ingrese una opcion: ') asNumber	]. 
 
