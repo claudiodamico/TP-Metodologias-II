@@ -17744,3 +17744,1394 @@ op:= (Prompter prompt: ' Ingrese una opcion: (9 para salir) ') asNumber	].
 
 "23:57:08, viernes, 13 de noviembre de 2020: Image saved"!
 
+"18:12:47, sábado, 14 de noviembre de 2020: Dolphin Smalltalk Professional started"!
+
+"Filed out from Dolphin Smalltalk 7"!
+
+Object subclass: #Agenda
+	instanceVariableNames: 'codigo_agenda lista_viajes lista_reservas'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Agenda guid: (GUID fromString: '{67691D7D-7512-464E-848C-93743BF88BFF}')!
+
+Agenda guid: (GUID fromString: '{67691D7D-7512-464E-848C-93743BF88BFF}')!
+Agenda comment: ''!
+
+Agenda comment:
+''!
+!Agenda methodsFor!
+agregarReserva: unaReserva
+"Agrega una reserva a la agenda"
+lista_reservas add: unaReserva.! !
+!Agenda categoriesFor: #agregarReserva:!public! !
+
+!Agenda methodsFor!
+agregarViaje: unViaje
+	"Agrega un viaje a la agenda"
+
+	lista_viajes add: unViaje! !
+!Agenda categoriesFor: #agregarViaje:!public! !
+
+!Agenda methodsFor!
+cantidadViajesXdia
+
+|cantViajesXdia noRepetidos diccionario |
+
+cantViajesXdia:= OrderedCollection new.
+lista_viajes do: [:via | cantViajesXdia add: via verDia ] . "Guardo los dias de cada viaje"
+noRepetidos:= cantViajesXdia asSet. "Creo una coleccion que no repita los dias"
+diccionario:= Dictionary new. "Creo un dicionario" 
+noRepetidos do: [:dia | diccionario at: dia put: (cantViajesXdia occurrencesOf: dia) ]. 
+
+diccionario inspect.! !
+!Agenda categoriesFor: #cantidadViajesXdia!public! !
+
+!Agenda methodsFor!
+eliminarReserva: unaReserva
+"Elimina una reserva de la agenda"
+lista_reservas remove: unaReserva.! !
+!Agenda categoriesFor: #eliminarReserva:!public! !
+
+!Agenda methodsFor!
+eliminarViaje: unViaje
+	"Elimina un viaje de la agenda"
+
+	lista_viajes remove: unViaje! !
+!Agenda categoriesFor: #eliminarViaje:!public! !
+
+!Agenda methodsFor!
+existeReserva: unaReserva
+"Retorna true si la reserva esta en la agenda, false en caso contrario"
+^lista_reservas includes: unaReserva.! !
+!Agenda categoriesFor: #existeReserva:!public! !
+
+!Agenda methodsFor!
+existeViaje: unViaje
+	"Retorna true si el viaje esta en la agenda, false en caso contrario"
+
+	^lista_viajes includes: unViaje! !
+!Agenda categoriesFor: #existeViaje:!public! !
+
+!Agenda methodsFor!
+iniAgendaCod: unCodigo
+	"Inicializa una instancia de agenda"
+
+	codigo_agenda := unCodigo.
+	lista_viajes := OrderedCollection new.
+	lista_reservas := OrderedCollection new.
+! !
+!Agenda categoriesFor: #iniAgendaCod:!public! !
+
+!Agenda methodsFor!
+seleccionarViajesACapital
+
+|col |
+col:= lista_viajes select: [:via| via verDestino =  'capital' ]. 
+^ col. ! !
+!Agenda categoriesFor: #seleccionarViajesACapital!public! !
+
+!Agenda methodsFor!
+verCodigo_agenda
+"Retorna el codigo de la agenda"
+^codigo_agenda.! !
+!Agenda categoriesFor: #verCodigo_agenda!public! !
+
+!Agenda categoriesFor: #agregarReserva:!public! !
+
+!Agenda categoriesFor: #agregarViaje:!public! !
+
+!Agenda categoriesFor: #cantidadViajesXdia!public! !
+
+!Agenda categoriesFor: #eliminarReserva:!public! !
+
+!Agenda categoriesFor: #eliminarViaje:!public! !
+
+!Agenda categoriesFor: #existeReserva:!public! !
+
+!Agenda categoriesFor: #existeViaje:!public! !
+
+!Agenda categoriesFor: #iniAgendaCod:!public! !
+
+!Agenda categoriesFor: #seleccionarViajesACapital!public! !
+
+!Agenda categoriesFor: #verCodigo_agenda!public! !
+
+!Agenda class methodsFor!
+crearAgendaCod: unCodigo
+"Retorna una instancia de agenda inicializada"
+^(self new) iniAgendaCod: unCodigo.! !
+!Agenda class categoriesFor: #crearAgendaCod:!public! !
+
+!Agenda class categoriesFor: #crearAgendaCod:!public! !
+
+!
+
+"Filed out from Dolphin Smalltalk 7"!
+
+Object subclass: #Auto
+	instanceVariableNames: 'patente color modelo codigo_auto'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Auto guid: (GUID fromString: '{18D22FD2-058F-493F-8753-033253D5886D}')!
+
+Auto guid: (GUID fromString: '{18D22FD2-058F-493F-8753-033253D5886D}')!
+Auto comment: ''!
+
+Auto comment:
+''!
+!Auto methodsFor!
+iniAutoPatente: unaPatente col:unColor mod:unModelo cod:unCodigo
+"Inicializa una instancia de auto"
+patente:=unaPatente.
+color:=unColor.
+modelo:=unModelo.
+codigo_auto:=unCodigo.! !
+!Auto categoriesFor: #iniAutoPatente:col:mod:cod:!public! !
+
+!Auto methodsFor!
+modiColor: unColor
+"Modifica el color del auto en caso de que sea pintado"
+color:=unColor.! !
+!Auto categoriesFor: #modiColor:!public! !
+
+!Auto methodsFor!
+verCodigo_auto
+"Retorna el codigo del auto"
+^codigo_auto.! !
+!Auto categoriesFor: #verCodigo_auto!public! !
+
+!Auto methodsFor!
+verColor
+"Retorna el color del auto"
+^color.! !
+!Auto categoriesFor: #verColor!public! !
+
+!Auto methodsFor!
+verModelo
+"Retorna el modelo del auto"
+^modelo.! !
+!Auto categoriesFor: #verModelo!public! !
+
+!Auto methodsFor!
+verPatente
+"Retorna la patente del auto"
+^patente.! !
+!Auto categoriesFor: #verPatente!public! !
+
+!Auto categoriesFor: #iniAutoPatente:col:mod:cod:!public! !
+
+!Auto categoriesFor: #modiColor:!public! !
+
+!Auto categoriesFor: #verCodigo_auto!public! !
+
+!Auto categoriesFor: #verColor!public! !
+
+!Auto categoriesFor: #verModelo!public! !
+
+!Auto categoriesFor: #verPatente!public! !
+
+!Auto class methodsFor!
+crearAutoPatente: unaPatente col:unColor mod:unModelo cod:unCodigo
+"Retorna una instancia de auto inicializada"
+^(self new) iniAutoPatente: unaPatente col:unColor mod:unModelo cod:unCodigo.! !
+!Auto class categoriesFor: #crearAutoPatente:col:mod:cod:!public! !
+
+!Auto class categoriesFor: #crearAutoPatente:col:mod:cod:!public! !
+
+!
+
+"Filed out from Dolphin Smalltalk 7"!
+
+Persona subclass: #Chofer
+	instanceVariableNames: 'codigo disponible registro auto'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Chofer guid: (GUID fromString: '{76281269-866C-4DA9-98DC-C0BD467FD79B}')!
+
+Chofer guid: (GUID fromString: '{76281269-866C-4DA9-98DC-C0BD467FD79B}')!
+Chofer comment: ''!
+
+Chofer comment:
+''!
+!Chofer methodsFor!
+agregarAuto: unAuto
+"Agrega o modifica un auto al chofer"
+auto:=unAuto.! !
+!Chofer categoriesFor: #agregarAuto:!public! !
+
+!Chofer methodsFor!
+iniChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro
+"Crea una instancia de chofer"
+super iniPersonaNom: unNombre dir: unaDireccion tel: unTelefono dni: unDni.
+codigo:=unCodigo.
+registro:=unRegistro.
+disponible:=true.
+! !
+!Chofer categoriesFor: #iniChoferNom:dir:tel:dni:cod:reg:!public! !
+
+!Chofer methodsFor!
+modiDisponibilidad
+"Modifica el estado del chofer"
+disponible:= disponible not.! !
+!Chofer categoriesFor: #modiDisponibilidad!public! !
+
+!Chofer methodsFor!
+modiRegistro: unreg
+"Modifica el registro del chofer"
+registro:= unreg. ! !
+!Chofer categoriesFor: #modiRegistro:!public! !
+
+!Chofer methodsFor!
+verAuto
+"Retorna auto"
+^auto.! !
+!Chofer categoriesFor: #verAuto!public! !
+
+!Chofer methodsFor!
+verCodigo
+"Retorna el codigo del chofer"
+^codigo.! !
+!Chofer categoriesFor: #verCodigo!public! !
+
+!Chofer methodsFor!
+verDisponibilidad
+"Retorna true si el chofer esta disponible"
+^disponible.! !
+!Chofer categoriesFor: #verDisponibilidad!public! !
+
+!Chofer methodsFor!
+verRegistro
+"Retorna el registro del chofer"
+^registro.! !
+!Chofer categoriesFor: #verRegistro!public! !
+
+!Chofer categoriesFor: #agregarAuto:!public! !
+
+!Chofer categoriesFor: #iniChoferNom:dir:tel:dni:cod:reg:!public! !
+
+!Chofer categoriesFor: #modiDisponibilidad!public! !
+
+!Chofer categoriesFor: #modiRegistro:!public! !
+
+!Chofer categoriesFor: #verAuto!public! !
+
+!Chofer categoriesFor: #verCodigo!public! !
+
+!Chofer categoriesFor: #verDisponibilidad!public! !
+
+!Chofer categoriesFor: #verRegistro!public! !
+
+!Chofer class methodsFor!
+crearChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro
+"Retorna una instancia de chofer inicializada"
+^(self new) iniChoferNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo reg:unRegistro.! !
+!Chofer class categoriesFor: #crearChoferNom:dir:tel:dni:cod:reg:!public! !
+
+!Chofer class categoriesFor: #crearChoferNom:dir:tel:dni:cod:reg:!public! !
+
+!
+
+"Filed out from Dolphin Smalltalk 7"!
+
+Persona subclass: #Cliente
+	instanceVariableNames: 'codigo_cliente'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Cliente guid: (GUID fromString: '{71C341BF-6F5E-4E57-865F-0B2A4740A73A}')!
+
+Cliente guid: (GUID fromString: '{71C341BF-6F5E-4E57-865F-0B2A4740A73A}')!
+Cliente comment: ''!
+
+Cliente comment:
+''!
+!Cliente methodsFor!
+iniClienteNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo
+"Inicializa una instancia de cliente"
+super iniPersonaNom: unNombre dir: unaDireccion tel: unTelefono dni: unDni.
+codigo_cliente:=unCodigo.! !
+!Cliente categoriesFor: #iniClienteNom:dir:tel:dni:cod:!public! !
+
+!Cliente methodsFor!
+verCodigoCliente
+"Retorna el codigo del cliente"
+^codigo_cliente.! !
+!Cliente categoriesFor: #verCodigoCliente!public! !
+
+!Cliente categoriesFor: #iniClienteNom:dir:tel:dni:cod:!public! !
+
+!Cliente categoriesFor: #verCodigoCliente!public! !
+
+!Cliente class methodsFor!
+crearClienteNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo
+"Retorna una instancia inicializada de cliente"
+^(self new) iniClienteNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo.! !
+!Cliente class categoriesFor: #crearClienteNom:dir:tel:dni:cod:!public! !
+
+!Cliente class categoriesFor: #crearClienteNom:dir:tel:dni:cod:!public! !
+
+!
+
+"Filed out from Dolphin Smalltalk 7"!
+
+Object subclass: #Persona
+	instanceVariableNames: 'nombre direccion telefono dni'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Persona guid: (GUID fromString: '{C6AE47F5-B04D-4702-99B2-8586C4DCD592}')!
+
+Persona guid: (GUID fromString: '{C6AE47F5-B04D-4702-99B2-8586C4DCD592}')!
+Persona comment: ''!
+
+Persona comment:
+''!
+!Persona methodsFor!
+iniPersonaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni
+"Inicializa una instancia de persona, sus clases hijos llamaran este metodo"
+nombre:=unNombre.
+direccion:=unaDireccion.
+telefono:=unTelefono.
+dni:=unDni.! !
+!Persona categoriesFor: #iniPersonaNom:dir:tel:dni:!public! !
+
+!Persona methodsFor!
+modiDireccion: unaDir
+"Modifica la direccion de una persona"
+direccion:=unaDir.! !
+!Persona categoriesFor: #modiDireccion:!public! !
+
+!Persona methodsFor!
+modiNombre: unNom
+"Modifica el nombre de una persona"
+nombre:=unNom.! !
+!Persona categoriesFor: #modiNombre:!public! !
+
+!Persona methodsFor!
+modiTelefono: unTel
+"Modifica el telefono"
+telefono:=unTel.! !
+!Persona categoriesFor: #modiTelefono:!public! !
+
+!Persona methodsFor!
+verDireccion
+"Retorna la direccion de una persona"
+^direccion.! !
+!Persona categoriesFor: #verDireccion!public! !
+
+!Persona methodsFor!
+verDni
+"Retorna el dni de una persona"
+^dni.! !
+!Persona categoriesFor: #verDni!public! !
+
+!Persona methodsFor!
+verNombre
+"Retorna el nombre de la persona"
+^nombre.! !
+!Persona categoriesFor: #verNombre!public! !
+
+!Persona methodsFor!
+verTelefono
+"Retorna el telefono de una persona"
+^telefono.! !
+!Persona categoriesFor: #verTelefono!public! !
+
+!Persona categoriesFor: #iniPersonaNom:dir:tel:dni:!public! !
+
+!Persona categoriesFor: #modiDireccion:!public! !
+
+!Persona categoriesFor: #modiNombre:!public! !
+
+!Persona categoriesFor: #modiTelefono:!public! !
+
+!Persona categoriesFor: #verDireccion!public! !
+
+!Persona categoriesFor: #verDni!public! !
+
+!Persona categoriesFor: #verNombre!public! !
+
+!Persona categoriesFor: #verTelefono!public! !
+
+!
+
+"Filed out from Dolphin Smalltalk 7"!
+
+Persona subclass: #Recepcionista
+	instanceVariableNames: 'horario_laboral codigo_recep agenda'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Recepcionista guid: (GUID fromString: '{CA762A3F-4C55-4415-8E4B-0C7C7C63AFC6}')!
+
+Recepcionista guid: (GUID fromString: '{CA762A3F-4C55-4415-8E4B-0C7C7C63AFC6}')!
+Recepcionista comment: ''!
+
+Recepcionista comment:
+''!
+!Recepcionista methodsFor!
+agregarAgenda: unaAgenda
+"Agrega una agenda a recepcionista"
+agenda:=unaAgenda.! !
+!Recepcionista categoriesFor: #agregarAgenda:!public! !
+
+!Recepcionista methodsFor!
+iniRecepcionistaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo hora:unaHorario
+"Inicializa una instancia de recepcionista"
+super iniPersonaNom: unNombre dir: unaDireccion tel: unTelefono dni: unDni.
+codigo_recep:=unCodigo.
+horario_laboral:=unaHorario.! !
+!Recepcionista categoriesFor: #iniRecepcionistaNom:dir:tel:dni:cod:hora:!public! !
+
+!Recepcionista methodsFor!
+modiHorario: unHorario
+"Modifica el horario laboral"
+horario_laboral:=unHorario.! !
+!Recepcionista categoriesFor: #modiHorario:!public! !
+
+!Recepcionista methodsFor!
+verAgenda
+"Retorna agenda"
+^agenda.! !
+!Recepcionista categoriesFor: #verAgenda!public! !
+
+!Recepcionista methodsFor!
+verCodigo_recep
+"Retorna el codigo de la recepcionista"
+^codigo_recep.! !
+!Recepcionista categoriesFor: #verCodigo_recep!public! !
+
+!Recepcionista methodsFor!
+verHorario
+"Retorna el horario laboral de la recepcionista"
+^horario_laboral.! !
+!Recepcionista categoriesFor: #verHorario!public! !
+
+!Recepcionista categoriesFor: #agregarAgenda:!public! !
+
+!Recepcionista categoriesFor: #iniRecepcionistaNom:dir:tel:dni:cod:hora:!public! !
+
+!Recepcionista categoriesFor: #modiHorario:!public! !
+
+!Recepcionista categoriesFor: #verAgenda!public! !
+
+!Recepcionista categoriesFor: #verCodigo_recep!public! !
+
+!Recepcionista categoriesFor: #verHorario!public! !
+
+!Recepcionista class methodsFor!
+crearRecepcionistaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo hora:unaHorario
+"Retorna una instancia de recepcionista inicializada"
+^(self new) iniRecepcionistaNom: unNombre dir:unaDireccion tel: unTelefono dni: unDni cod:unCodigo hora:unaHorario.! !
+!Recepcionista class categoriesFor: #crearRecepcionistaNom:dir:tel:dni:cod:hora:!public! !
+
+!Recepcionista class categoriesFor: #crearRecepcionistaNom:dir:tel:dni:cod:hora:!public! !
+
+!
+
+"Filed out from Dolphin Smalltalk 7"!
+
+Object subclass: #Remiseria
+	instanceVariableNames: 'nombre direccion telefono lista_chofer lista_clientes recepcionista'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Remiseria guid: (GUID fromString: '{8BA576A0-A272-492A-BB0D-3B4AA0BC7775}')!
+
+Remiseria guid: (GUID fromString: '{8BA576A0-A272-492A-BB0D-3B4AA0BC7775}')!
+Remiseria comment: ''!
+
+Remiseria comment:
+''!
+!Remiseria methodsFor!
+agregarChofer: unChofer
+"Agrega un chofer a la remiseria"
+lista_chofer add: unChofer.! !
+!Remiseria categoriesFor: #agregarChofer:!public! !
+
+!Remiseria methodsFor!
+agregarCliente: unCliente
+"Agrega un cliente a la remiseria"
+lista_clientes add: unCliente.! !
+!Remiseria categoriesFor: #agregarCliente:!public! !
+
+!Remiseria methodsFor!
+buscarClienteCod: unCod
+"Busca el cliente con el codigo asociado"
+"1 to: lista_clientes size do: [:i| (self existeCliente: (lista_clientes at: i)) ifTrue: [((lista_clientes  at: i) verCodigoCliente  = unCod )ifTrue: [^(lista_clientes  at: i)]
+																							ifFalse: [ ^nil ]	] ]. "
+
+|cli | 
+"Metodo para buscar un chofer disponible para asignar a un viaje"
+cli:=(self todosLosClientes ) detect: [:each |  each verCodigoCliente = unCod ] ifNone: [^nil] .
+^cli. 
+ ! !
+!Remiseria categoriesFor: #buscarClienteCod:!public! !
+
+!Remiseria methodsFor!
+choferDisponible
+|cho | 
+"Metodo para buscar un chofer disponible para asignar a un viaje"
+^(cho:=(self todosLosChoferes) detect: [:each |  each verDisponibilidad = true ] ifNone:[^nil ]).
+! !
+!Remiseria categoriesFor: #choferDisponible!public! !
+
+!Remiseria methodsFor!
+choferesEnViaje
+" Retorna en una lista los choferes que estan ocupados en viaje; con disponibilidad=false.  "
+|col |
+col:= lista_chofer reject: [:ch | ch verDisponibilidad = true ]. 
+^ col. ! !
+!Remiseria categoriesFor: #choferesEnViaje!public! !
+
+!Remiseria methodsFor!
+eliminarChofer: unChofer
+"Elimina un chofer de la remiseria"
+lista_chofer remove: unChofer.! !
+!Remiseria categoriesFor: #eliminarChofer:!public! !
+
+!Remiseria methodsFor!
+eliminarCliente: unCliente
+"Elimina un cliente de la remiseria"
+lista_clientes remove: unCliente.! !
+!Remiseria categoriesFor: #eliminarCliente:!public! !
+
+!Remiseria methodsFor!
+existeChofer: unChofer
+"Retorna true si el chofer existe en el remiseria, retorna false en caso contrario"
+^lista_chofer includes: unChofer.! !
+!Remiseria categoriesFor: #existeChofer:!public! !
+
+!Remiseria methodsFor!
+existeCliente: unCliente
+"Retorna true si existe el cliente en la remiseria, false en caso contrario"
+^lista_clientes includes: unCliente.! !
+!Remiseria categoriesFor: #existeCliente:!public! !
+
+!Remiseria methodsFor!
+iniRemiseriaNom: unNombre dir:unaDireccion unTel: unTelefono unaRep: unaRecepcionista
+"Inicializa una instancia de Remiseria"
+nombre:= unNombre.
+direccion:=unaDireccion.
+telefono:=unTelefono.
+recepcionista:=unaRecepcionista. 
+lista_chofer:= OrderedCollection new.
+lista_clientes:= OrderedCollection new.! !
+!Remiseria categoriesFor: #iniRemiseriaNom:dir:unTel:unaRep:!public! !
+
+!Remiseria methodsFor!
+modiDireccion: unaDir
+"Modifica la direccion de la remiseria"
+direccion:=unaDir.! !
+!Remiseria categoriesFor: #modiDireccion:!public! !
+
+!Remiseria methodsFor!
+modiNombre: unNom
+"Modifica el nombre de la remiseria"
+nombre:=unNom.! !
+!Remiseria categoriesFor: #modiNombre:!public! !
+
+!Remiseria methodsFor!
+modiTelefono: unTel
+"Modifica el telefono de la remiseria"
+telefono:=unTel. ! !
+!Remiseria categoriesFor: #modiTelefono:!public! !
+
+!Remiseria methodsFor!
+todosLosChoferes
+"Retorna la lista de los choferes"
+^lista_chofer.! !
+!Remiseria categoriesFor: #todosLosChoferes!public! !
+
+!Remiseria methodsFor!
+todosLosClientes
+"Retorna la lista de clientes"
+^lista_clientes.! !
+!Remiseria categoriesFor: #todosLosClientes!public! !
+
+!Remiseria methodsFor!
+verDireccion
+"Retorna la direccion de la remiseria"
+^direccion.! !
+!Remiseria categoriesFor: #verDireccion!public! !
+
+!Remiseria methodsFor!
+verNombre
+"Retorna el nombre de la Remiseria"
+^ nombre.! !
+!Remiseria categoriesFor: #verNombre!public! !
+
+!Remiseria methodsFor!
+verRecepcionista
+"Retorna a la recepcionista de la remiseria"
+^recepcionista.  "A futuro ver que este metodo llame a verNombre de la clase recepcionista"! !
+!Remiseria categoriesFor: #verRecepcionista!public! !
+
+!Remiseria methodsFor!
+verTelefono
+"Retorna el telefono de la remiseria"
+^telefono.! !
+!Remiseria categoriesFor: #verTelefono!public! !
+
+!Remiseria categoriesFor: #agregarChofer:!public! !
+
+!Remiseria categoriesFor: #agregarCliente:!public! !
+
+!Remiseria categoriesFor: #buscarClienteCod:!public! !
+
+!Remiseria categoriesFor: #choferDisponible!public! !
+
+!Remiseria categoriesFor: #choferesEnViaje!public! !
+
+!Remiseria categoriesFor: #eliminarChofer:!public! !
+
+!Remiseria categoriesFor: #eliminarCliente:!public! !
+
+!Remiseria categoriesFor: #existeChofer:!public! !
+
+!Remiseria categoriesFor: #existeCliente:!public! !
+
+!Remiseria categoriesFor: #iniRemiseriaNom:dir:unTel:unaRep:!public! !
+
+!Remiseria categoriesFor: #modiDireccion:!public! !
+
+!Remiseria categoriesFor: #modiNombre:!public! !
+
+!Remiseria categoriesFor: #modiTelefono:!public! !
+
+!Remiseria categoriesFor: #todosLosChoferes!public! !
+
+!Remiseria categoriesFor: #todosLosClientes!public! !
+
+!Remiseria categoriesFor: #verDireccion!public! !
+
+!Remiseria categoriesFor: #verNombre!public! !
+
+!Remiseria categoriesFor: #verRecepcionista!public! !
+
+!Remiseria categoriesFor: #verTelefono!public! !
+
+!Remiseria class methodsFor!
+crearRemiseriaNom: unNombre dir:unaDireccion unTel: unTelefono unaRep: unaRecepcionista
+"Retorna una instancia de remiseria inicializada"
+^(self new) iniRemiseriaNom: unNombre dir:unaDireccion unTel: unTelefono unaRep: unaRecepcionista.! !
+!Remiseria class categoriesFor: #crearRemiseriaNom:dir:unTel:unaRep:!public! !
+
+!Remiseria class categoriesFor: #crearRemiseriaNom:dir:unTel:unaRep:!public! !
+
+!
+
+"Filed out from Dolphin Smalltalk 7"!
+
+Object subclass: #Reserva
+	instanceVariableNames: 'codigo_reserva hora_reserva destino fecha cliente'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Reserva guid: (GUID fromString: '{AA4F9A87-EEA6-4B9E-9A1F-86B906119546}')!
+
+Reserva guid: (GUID fromString: '{AA4F9A87-EEA6-4B9E-9A1F-86B906119546}')!
+Reserva comment: ''!
+
+Reserva comment:
+''!
+!Reserva methodsFor!
+dia
+	"Retorna la fecha de la reserva"
+
+	^fecha! !
+!Reserva categoriesFor: #dia!public! !
+
+!Reserva methodsFor!
+dia: unaFecha
+	"Modifica la fecha de una reserva"
+
+	fecha := unaFecha! !
+!Reserva categoriesFor: #dia:!public! !
+
+!Reserva methodsFor!
+iniReservaCod: unCodigo hora: unaHora fecha: unaFecha dest: unDestino cliente: unCliente
+"Inicializa una instancia de reserva"
+codigo_reserva:=unCodigo.
+hora_reserva:=unaHora.
+destino:=unDestino.
+fecha:=unaFecha.
+cliente:=unCliente. ! !
+!Reserva categoriesFor: #iniReservaCod:hora:fecha:dest:cliente:!public! !
+
+!Reserva methodsFor!
+modiCliente: unCliente
+"Modifica el cliente que hace la reserva"
+cliente:= unCliente. ! !
+!Reserva categoriesFor: #modiCliente:!public! !
+
+!Reserva methodsFor!
+modiDestino: unDestino
+"Modifica el destino de una reserva"
+destino:=unDestino. ! !
+!Reserva categoriesFor: #modiDestino:!public! !
+
+!Reserva methodsFor!
+modiHoraReserva: unaHora
+"Modifica la hora de la reserva"
+hora_reserva:= unaHora. ! !
+!Reserva categoriesFor: #modiHoraReserva:!public! !
+
+!Reserva methodsFor!
+verCliente
+"Retorna el cliente de la reserva"
+^cliente. ! !
+!Reserva categoriesFor: #verCliente!public! !
+
+!Reserva methodsFor!
+verCodigoReserva
+"Retorna el codigo de la reserva"
+^codigo_reserva.! !
+!Reserva categoriesFor: #verCodigoReserva!public! !
+
+!Reserva methodsFor!
+verDestino
+"Retorna  el destino de la reserva"
+^destino. ! !
+!Reserva categoriesFor: #verDestino!public! !
+
+!Reserva methodsFor!
+verHoraReserva
+"Retorna la hora de la reserva"
+^hora_reserva. ! !
+!Reserva categoriesFor: #verHoraReserva!public! !
+
+!Reserva categoriesFor: #dia!public! !
+
+!Reserva categoriesFor: #dia:!public! !
+
+!Reserva categoriesFor: #iniReservaCod:hora:fecha:dest:cliente:!public! !
+
+!Reserva categoriesFor: #modiCliente:!public! !
+
+!Reserva categoriesFor: #modiDestino:!public! !
+
+!Reserva categoriesFor: #modiHoraReserva:!public! !
+
+!Reserva categoriesFor: #verCliente!public! !
+
+!Reserva categoriesFor: #verCodigoReserva!public! !
+
+!Reserva categoriesFor: #verDestino!public! !
+
+!Reserva categoriesFor: #verHoraReserva!public! !
+
+!Reserva class methodsFor!
+crearReservaCod: unCodigo hora: unaHora fecha: unaFecha dest: unDestino cliente: unCliente
+"Retorna una instancia de reserva inicializada"
+^ (self new) iniReservaCod: unCodigo hora: unaHora fecha: unaFecha dest: unDestino cliente: unCliente.! !
+!Reserva class categoriesFor: #crearReservaCod:hora:fecha:dest:cliente:!public! !
+
+!Reserva class categoriesFor: #crearReservaCod:hora:fecha:dest:cliente:!public! !
+
+!
+
+"Filed out from Dolphin Smalltalk 7"!
+
+Object subclass: #Viaje
+	instanceVariableNames: 'codigo_viaje dia hora destino importe cliente chofer'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Viaje guid: (GUID fromString: '{E03F36D0-4DD3-4739-95B5-18145BE9533D}')!
+
+Viaje guid: (GUID fromString: '{E03F36D0-4DD3-4739-95B5-18145BE9533D}')!
+Viaje comment: ''!
+
+Viaje comment:
+''!
+!Viaje methodsFor!
+iniViajeCod: unCodigo dia: unaFecha hora: unaHora destino: unDestino import: unImporte cli: unCliente cho: unChofer
+	"Inicializa una instancia de viaje"
+
+	codigo_viaje := unCodigo.
+	dia := unaFecha.
+	hora := unaHora.
+	destino := unDestino.
+	importe := unImporte.
+	cliente := unCliente.
+	chofer := unChofer! !
+!Viaje categoriesFor: #iniViajeCod:dia:hora:destino:import:cli:cho:!public! !
+
+!Viaje methodsFor!
+modiChofer: unChofer
+"Modifica un chofer del viaje"
+chofer:=unChofer. ! !
+!Viaje categoriesFor: #modiChofer:!public! !
+
+!Viaje methodsFor!
+modiCliente: unCliente
+"Modifica el cliente del viaje"
+cliente:= unCliente. ! !
+!Viaje categoriesFor: #modiCliente:!public! !
+
+!Viaje methodsFor!
+modiDestino: unDestino
+"Modifica el destino del viaje"
+destino:= unDestino.! !
+!Viaje categoriesFor: #modiDestino:!public! !
+
+!Viaje methodsFor!
+modiDia: unaFecha
+	"Modifica la fecha del viaje"
+
+	dia := unaFecha! !
+!Viaje categoriesFor: #modiDia:!public! !
+
+!Viaje methodsFor!
+modiHora: unaHora
+"Mofifica la hora del viaje"
+hora:= unaHora.! !
+!Viaje categoriesFor: #modiHora:!public! !
+
+!Viaje methodsFor!
+modiImporte: unImporte
+"Modifica el importe de un viaje"
+importe:=unImporte. ! !
+!Viaje categoriesFor: #modiImporte:!public! !
+
+!Viaje methodsFor!
+verChofer
+"Retorna el chofer del viaje"
+^chofer. ! !
+!Viaje categoriesFor: #verChofer!public! !
+
+!Viaje methodsFor!
+verCliente
+"Retorna el cliente del viaje"
+^cliente. ! !
+!Viaje categoriesFor: #verCliente!public! !
+
+!Viaje methodsFor!
+verCodigo_viaje
+"Retorna el codigo del viaje"
+^codigo_viaje.! !
+!Viaje categoriesFor: #verCodigo_viaje!public! !
+
+!Viaje methodsFor!
+verDestino
+"Retorna el destino del viaje"
+^destino. ! !
+!Viaje categoriesFor: #verDestino!public! !
+
+!Viaje methodsFor!
+verDia
+	"Retorna la fecha del viaje"
+
+	^dia! !
+!Viaje categoriesFor: #verDia!public! !
+
+!Viaje methodsFor!
+verHora
+"Retorna la hora del viaje"
+^hora. ! !
+!Viaje categoriesFor: #verHora!public! !
+
+!Viaje methodsFor!
+verImporte
+"Retorna el importe del viaje"
+^importe. ! !
+!Viaje categoriesFor: #verImporte!public! !
+
+!Viaje categoriesFor: #iniViajeCod:dia:hora:destino:import:cli:cho:!public! !
+
+!Viaje categoriesFor: #modiChofer:!public! !
+
+!Viaje categoriesFor: #modiCliente:!public! !
+
+!Viaje categoriesFor: #modiDestino:!public! !
+
+!Viaje categoriesFor: #modiDia:!public! !
+
+!Viaje categoriesFor: #modiHora:!public! !
+
+!Viaje categoriesFor: #modiImporte:!public! !
+
+!Viaje categoriesFor: #verChofer!public! !
+
+!Viaje categoriesFor: #verCliente!public! !
+
+!Viaje categoriesFor: #verCodigo_viaje!public! !
+
+!Viaje categoriesFor: #verDestino!public! !
+
+!Viaje categoriesFor: #verDia!public! !
+
+!Viaje categoriesFor: #verHora!public! !
+
+!Viaje categoriesFor: #verImporte!public! !
+
+!Viaje class methodsFor!
+crearViajeCod: unCodigo dia: unaFecha hora: unaHora destino: unDestino import: unImporte cli:unCliente cho:unChofer
+"Retorna una instancia de viaje inicializada"
+^(self new) iniViajeCod:  unCodigo dia: unaFecha hora: unaHora destino: unDestino import: unImporte cli:unCliente cho:unChofer .! !
+!Viaje class categoriesFor: #crearViajeCod:dia:hora:destino:import:cli:cho:!public! !
+
+!Viaje class categoriesFor: #crearViajeCod:dia:hora:destino:import:cli:cho:!public! !
+
+!
+
+Object subclass: #Viaje
+	instanceVariableNames: 'codigo_viaje dia hora destino importe cliente chofer fecha'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+| op n d t dn co re ch remi col1 cl col2 col aut c cliente |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+c modiDisponibilidad. 
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: '***************************************************************************************************' ;
+cr;
+show: '*********************** Remiseria ',  remi verNombre printString , '  ****************************************************';
+cr;
+show: '***************************************************************************************************';
+cr;
+show: TimeStamp current date printString;
+cr;
+cr.
+
+Transcript show: '          Menu: ';
+cr;
+show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Cargar un viaje';
+cr;
+show: ' 4. Cantidad de viajes por dia';
+cr;
+show: ' 5. Choferes ocupados en viaje' ;
+cr;
+show: ' 6. Imprimir choferes'; 
+cr;
+show: ' 7. Imprimir clientes';
+cr;
+show: ' 8. Viajes a capital' ;
+cr;
+show: ' 9. Salir' ;
+cr;
+show: '--------------------------------------------------------------------------------------------';
+cr.
+
+op:= (Prompter prompt: ' Ingrese una opcion:           (9 para salir) ') asNumber.
+[op ~=9] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch .
+			MessageBox notify: 'Chofer registrado con exito!!' . 
+			Transcript show: ' Se registro con exito al chofer';cr;cr ].
+
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= (Prompter prompt: ' Ingrese el codigo del cliente: ') asNumber .
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl .
+			MessageBox notify: 'Cliente registrado con exito!!'.
+		        Transcript show: ' Se registro con exito al cliente';cr;cr ].
+
+(op=3) ifTrue: [ codCliente:= (Prompter prompt: ' Ingrese el codigo del cliente para el viaje: ') asNumber .
+cliente:= remi buscarClienteCod: codCliente. 
+(cliente ~= nil ) ifTrue: [ ch:= remi choferDisponible.
+					(ch~=nil) ifTrue: [ remi eliminarChofer: ch. ch modiDisponibilidad. remi agregarChofer: ch.
+
+cod:=Prompter prompt: ' Ingrese el codigo del viaje'.
+fech:= Prompter prompt: ' Ingrese la fecha del viaje: '. "TimeStamp current date."
+hs:= Prompter prompt: ' Ingrese la hora del viaje: '. "TimeStamp current time. "
+des:= Prompter prompt: ' Ingrese el destino del viaje: '.
+imp:= Prompter prompt: ' Ingrese el importe: '.
+ 
+v:= Viaje crearViajeCod: cod dia: fech hora: hs destino: des import: imp cli: cliente cho: ch . 
+a agregarViaje: v. 
+MessageBox notify: 'Viaje registrado con exito ' .Transcript show: ' Se registro bien el viaje' ;cr ;show:  '----------------------------------------------------------------------';cr. ] 
+ifFalse: [ MessageBox warning: 'No hay choferes disponibles'. Transcript show: 'Todos los choferes estan ocupados';cr , 
+'----------------------------------------------------------------------------------------------';cr. ] .
+  ] ifFalse: [ Transcript show: ' El cliente no esta registrado en el sistema'; cr .
+MessageBox warning: 'El cliente no esta registrado en el sistema'.
+registrarlo:= MessageBox confirm: '¿Desea ingresar un nuevo cliente?'. (registrarlo=true) ifTrue: [Transcript show: 'Ingrese un nuevo cliente'; cr.
+			n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl .
+			MessageBox  notify: 'Cliente rgistrado con exito'. Transcript show: 'Se registro bien el cliente.';cr:'--------------------------------------------------------------------------------------';cr. ] ] .  ]. 
+
+(op=4) ifTrue: [  a cantidadViajesXdia ] .
+
+(op=5) ifTrue: [  Transcript show: 'Choferes ocupados en viaje: '; cr.
+col:= remi choferesEnViaje reject: [:each | Transcript  show: 'Nombre: ' , ( each verNombre printString , '  Auto: ' ,  (each verAuto) verModelo printString) ;cr ] .
+Transcript show: '-------------------------------------------------------------------------------------------------------';cr. ] . 
+
+(op=6) ifTrue: [ Transcript show: ' Choferes cargados en el sistema: ';cr.
+ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: 'Nombre: ',  (col1 at: i)  verNombre printString;cr ]. Transcript show: '----------------------------------------------------------------------------------';cr.].
+
+(op=7) ifTrue: [ 
+Transcript show: ' Clientes  cargados en el sistema: ';cr.
+col2:= remi todosLosClientes  collect: [:each | Transcript show: ' Nombre: ' ,  (each verNombre printString , ' Direccion: ' ,  each verDireccion printString,' Codigo: '  , each verCodigoCliente printString ); cr ]. 
+Transcript show: '----------------------------------------------------------------------------------';cr. ].
+
+
+(op=8) ifTrue: [ Transcript show: ' Lista de viajes a capital: '; cr.
+col:=a seleccionarViajesACapital collect: [:each | Transcript show: ( 'Cliente: ', (each verCliente) verNombre printString , 'Importe del viaje: ' ,  each verImporte printString) ; cr ] .
+Transcript  show: '---------------------------------------------------------------------------------------------------------';cr. ] . 
+
+op:= (Prompter prompt: ' Ingrese una opcion: (9 para salir) ') asNumber	]. 
+
+!
+
+| op n d t dn co re ch remi col1 cl col2 col aut c cliente |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+c modiDisponibilidad. 
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: '***************************************************************************************************' ;
+cr;
+show: '*********************** Remiseria ',  remi verNombre printString , '  ****************************************************';
+cr;
+show: '***************************************************************************************************';
+cr;
+show: TimeStamp current date printString;
+cr;
+cr.
+
+Transcript show: '          Menu: ';
+cr;
+show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Cargar un viaje';
+cr;
+show: ' 4. Cantidad de viajes por dia';
+cr;
+show: ' 5. Choferes ocupados en viaje' ;
+cr;
+show: ' 6. Imprimir choferes'; 
+cr;
+show: ' 7. Imprimir clientes';
+cr;
+show: ' 8. Viajes a capital' ;
+cr;
+show: ' 9. Salir' ;
+cr;
+show: '--------------------------------------------------------------------------------------------';
+cr.
+
+op:= (Prompter prompt: ' Ingrese una opcion:           (9 para salir) ') asNumber.
+[op ~=9] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch .
+			MessageBox notify: 'Chofer registrado con exito!!' . 
+			Transcript show: ' Se registro con exito al chofer';cr;cr ].
+
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= (Prompter prompt: ' Ingrese el codigo del cliente: ') asNumber .
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl .
+			MessageBox notify: 'Cliente registrado con exito!!'.
+		        Transcript show: ' Se registro con exito al cliente';cr;cr ].
+
+(op=3) ifTrue: [ codCliente:= (Prompter prompt: ' Ingrese el codigo del cliente para el viaje: ') asNumber .
+cliente:= remi buscarClienteCod: codCliente. 
+(cliente ~= nil ) ifTrue: [ ch:= remi choferDisponible.
+					(ch~=nil) ifTrue: [ remi eliminarChofer: ch. ch modiDisponibilidad. remi agregarChofer: ch.
+
+cod:=Prompter prompt: ' Ingrese el codigo del viaje'.
+fech:= Prompter prompt: ' Ingrese la fecha del viaje: '. "TimeStamp current date."
+hs:= Prompter prompt: ' Ingrese la hora del viaje: '. "TimeStamp current time. "
+des:= Prompter prompt: ' Ingrese el destino del viaje: '.
+imp:= Prompter prompt: ' Ingrese el importe: '.
+ 
+v:= Viaje crearViajeCod: cod dia: fech hora: hs destino: des import: imp cli: cliente cho: ch . 
+a agregarViaje: v. 
+MessageBox notify: 'Viaje registrado con exito ' .Transcript show: ' Se registro bien el viaje' ;cr ;show:  '----------------------------------------------------------------------';cr. ] 
+ifFalse: [ MessageBox warning: 'No hay choferes disponibles'. Transcript show: 'Todos los choferes estan ocupados';cr , 
+'----------------------------------------------------------------------------------------------';cr. ] .
+  ] ifFalse: [ Transcript show: ' El cliente no esta registrado en el sistema'; cr .
+MessageBox warning: 'El cliente no esta registrado en el sistema'.
+registrarlo:= MessageBox confirm: '¿Desea ingresar un nuevo cliente?'. (registrarlo=true) ifTrue: [Transcript show: 'Ingrese un nuevo cliente'; cr.
+			n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl .
+			MessageBox  notify: 'Cliente rgistrado con exito'. Transcript show: 'Se registro bien el cliente.';cr:'--------------------------------------------------------------------------------------';cr. ] ] .  ]. 
+
+(op=4) ifTrue: [  a cantidadViajesXdia ] .
+
+(op=5) ifTrue: [  Transcript show: 'Choferes ocupados en viaje: '; cr.
+col:= remi choferesEnViaje reject: [:each | Transcript  show: 'Nombre: ' , ( each verNombre printString , '  Auto: ' ,  (each verAuto) verModelo printString) ;cr ] .
+Transcript show: '-------------------------------------------------------------------------------------------------------';cr. ] . 
+
+(op=6) ifTrue: [ Transcript show: ' Choferes cargados en el sistema: ';cr.
+ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: 'Nombre: ',  (col1 at: i)  verNombre printString;cr ]. Transcript show: '----------------------------------------------------------------------------------';cr.].
+
+(op=7) ifTrue: [ 
+Transcript show: ' Clientes  cargados en el sistema: ';cr.
+col2:= remi todosLosClientes  collect: [:each | Transcript show: ' Nombre: ' ,  (each verNombre printString , ' Direccion: ' ,  each verDireccion printString,' Codigo: '  , each verCodigoCliente printString ); cr ]. 
+Transcript show: '----------------------------------------------------------------------------------';cr. ].
+
+
+(op=8) ifTrue: [ Transcript show: ' Lista de viajes a capital: '; cr.
+col:=a seleccionarViajesACapital collect: [:each | Transcript show: ( 'Cliente: ', (each verCliente) verNombre printString , 'Importe del viaje: ' ,  each verImporte printString) ; cr ] .
+Transcript  show: '---------------------------------------------------------------------------------------------------------';cr. ] . 
+
+op:= (Prompter prompt: ' Ingrese una opcion: (9 para salir) ') asNumber	]. 
+
+!
+
+| op n d t dn co re ch remi col1 cl col2 col aut c cliente |
+
+r:= Recepcionista crearRecepcionistaNom: 'maria' dir: 'calle laprida 4857' tel: '47841257' dni: '789456123' cod: 01 hora: '8 a 12'.
+
+a:=Agenda crearAgendaCod: 1.
+r agregarAgenda: a. 
+
+remi:= Remiseria crearRemiseriaNom: 'Paraiso' dir: 'calle 1234' unTel: '42558977' unaRep: r.
+
+aut:= Auto crearAutoPatente: '123' col: 'rojo' mod: 'fiat siena' cod: 05 .
+c:= Chofer crearChoferNom: 'Julio' dir: 'Calle necoche 7894' tel: '42558798' dni: '456789123' cod: 01 reg: 'profesional'.
+c agregarAuto: aut.
+c modiDisponibilidad. 
+remi agregarChofer: c. 
+
+aut:= Auto crearAutoPatente: '236' col: 'blanco' mod: 'chevrolet corsa' cod: 06 .
+c:= Chofer crearChoferNom: 'Mario' dir: 'Calle 14 7415' tel: '42457816' dni: '159753147' cod: 02 reg: 'profesional'.
+c agregarAuto: aut .
+remi agregarChofer: c.
+
+aut:= Auto crearAutoPatente: '789' col: 'negro' mod: 'renault logan' cod: 07 .
+c:=Chofer crearChoferNom: 'Pedro' dir: 'Calle peron 1254' tel: '42578498' dni: '45458723' cod: 03 reg: 'comun'.
+c agregarAuto: aut . 
+remi agregarChofer: c. 
+
+
+cl:= Cliente crearClienteNom: 'Nico' dir: 'calle arrecifes 1587' tel: '42387458' dni: '78954127' cod: 01.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Enzo' dir: 'av. clachaqui 1500 ' tel: '42375429' dni: '7547857' cod: 02.
+remi agregarCliente: cl.
+
+cl:= Cliente crearClienteNom: 'Claudio' dir: 'calle neuquen 1987' tel: '42558710' dni: '78945217' cod: 03.
+remi agregarCliente: cl. 
+
+Transcript clear;
+show: '***************************************************************************************************' ;
+cr;
+show: '*********************** Remiseria ',  remi verNombre printString , '  ****************************************************';
+cr;
+show: '***************************************************************************************************';
+cr;
+show: TimeStamp current date printString;
+cr;
+cr.
+
+Transcript show: '          Menu: ';
+cr;
+show: ' 1. Carga de choferes';
+cr;
+show: ' 2. Carga de clientes';
+cr;
+show: ' 3. Cargar un viaje';
+cr;
+show: ' 4. Cantidad de viajes por dia';
+cr;
+show: ' 5. Choferes ocupados en viaje' ;
+cr;
+show: ' 6. Imprimir choferes'; 
+cr;
+show: ' 7. Imprimir clientes';
+cr;
+show: ' 8. Viajes a capital' ;
+cr;
+show: ' 9. Salir' ;
+cr;
+show: '--------------------------------------------------------------------------------------------';
+cr.
+
+op:= (Prompter prompt: ' Ingrese una opcion:           (9 para salir) ') asNumber.
+[op ~=9] whileTrue: [ 
+(op=1) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del chofer: '.
+			d:= Prompter prompt: 'Ingrese la direccion del chofer:'.
+			t:= Prompter prompt: ' Ingrese el telefono del chofer: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del chofer: '.
+			co:= Prompter prompt: ' Ingrese el codigo del chofer: '.
+			re:= Prompter prompt: ' Ingrese el tipo de registro del chofer: '.
+			
+			ch:= Chofer crearChoferNom: n dir: d tel: t dni: dn cod: co reg: re . 
+			remi agregarChofer: ch .
+			MessageBox notify: 'Chofer registrado con exito!!' . 
+			Transcript show: ' Se registro con exito al chofer';cr;cr ].
+
+(op=2) ifTrue: [ n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= (Prompter prompt: ' Ingrese el codigo del cliente: ') asNumber .
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl .
+			MessageBox notify: 'Cliente registrado con exito!!'.
+		        Transcript show: ' Se registro con exito al cliente';cr;cr ].
+
+(op=3) ifTrue: [ codCliente:= (Prompter prompt: ' Ingrese el codigo del cliente para el viaje: ') asNumber .
+cliente:= remi buscarClienteCod: codCliente. 
+(cliente ~= nil ) ifTrue: [ ch:= remi choferDisponible.
+					(ch~=nil) ifTrue: [ remi eliminarChofer: ch. ch modiDisponibilidad. remi agregarChofer: ch.
+
+cod:=Prompter prompt: ' Ingrese el codigo del viaje'.
+fech:= Prompter prompt: ' Ingrese la fecha del viaje: '. "TimeStamp current date."
+hs:= Prompter prompt: ' Ingrese la hora del viaje: '. "TimeStamp current time. "
+des:= Prompter prompt: ' Ingrese el destino del viaje: '.
+imp:= Prompter prompt: ' Ingrese el importe: '.
+ 
+v:= Viaje crearViajeCod: cod dia: fech hora: hs destino: des import: imp cli: cliente cho: ch . 
+a agregarViaje: v. 
+MessageBox notify: 'Viaje registrado con exito ' .Transcript show: ' Se registro bien el viaje' ;cr ;show:  '----------------------------------------------------------------------';cr. ] 
+ifFalse: [ MessageBox warning: 'No hay choferes disponibles'. Transcript show: 'Todos los choferes estan ocupados';cr , 
+'----------------------------------------------------------------------------------------------';cr. ] .
+  ] ifFalse: [ Transcript show: ' El cliente no esta registrado en el sistema'; cr .
+MessageBox warning: 'El cliente no esta registrado en el sistema'.
+registrarlo:= MessageBox confirm: '¿Desea ingresar un nuevo cliente?'. (registrarlo=true) ifTrue: [Transcript show: 'Ingrese un nuevo cliente'; cr.
+			n:= Prompter prompt: 'Ingrese el nombre del cliente: '.
+			d:= Prompter prompt: 'Ingrese la direccion del cliente:'.
+			t:= Prompter prompt: ' Ingrese el telefono del cliente: '.
+			dn:= Prompter prompt:  ' Ingrese el DNI del cliente: '.
+			co:= Prompter prompt: ' Ingrese el codigo del cliente: '.
+
+			cl:=Cliente  crearClienteNom: n dir: d tel: t dni: dn cod: co .
+			remi agregarCliente: cl .
+			MessageBox  notify: 'Cliente rgistrado con exito'. Transcript show: 'Se registro bien el cliente.';cr:'--------------------------------------------------------------------------------------';cr. ] ] .  ]. 
+
+(op=4) ifTrue: [  a cantidadViajesXdia ] .
+
+(op=5) ifTrue: [  Transcript show: 'Choferes ocupados en viaje: '; cr.
+col:= remi choferesEnViaje reject: [:each | Transcript  show: 'Nombre: ' , ( each verNombre printString , '  Auto: ' ,  (each verAuto) verModelo printString) ;cr ] .
+Transcript show: '-------------------------------------------------------------------------------------------------------';cr. ] . 
+
+(op=6) ifTrue: [ Transcript show: ' Choferes cargados en el sistema: ';cr.
+ col1:=remi todosLosChoferes.
+1 to: col1 size do: [:i|Transcript show: 'Nombre: ',  (col1 at: i)  verNombre printString;cr ]. Transcript show: '----------------------------------------------------------------------------------';cr.].
+
+(op=7) ifTrue: [ 
+Transcript show: ' Clientes  cargados en el sistema: ';cr.
+col2:= remi todosLosClientes  collect: [:each | Transcript show: ' Nombre: ' ,  (each verNombre printString , ' Direccion: ' ,  each verDireccion printString,' Codigo: '  , each verCodigoCliente printString ); cr ]. 
+Transcript show: '----------------------------------------------------------------------------------';cr. ].
+
+
+(op=8) ifTrue: [ Transcript show: ' Lista de viajes a capital: '; cr.
+col:=a seleccionarViajesACapital collect: [:each | Transcript show: ( 'Cliente: ', (each verCliente) verNombre printString , 'Importe del viaje: ' ,  each verImporte printString) ; cr ] .
+Transcript  show: '---------------------------------------------------------------------------------------------------------';cr. ] . 
+
+op:= (Prompter prompt: ' Ingrese una opcion: (9 para salir) ') asNumber	]. 
+
+!
+
