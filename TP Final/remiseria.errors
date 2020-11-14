@@ -46,7 +46,7 @@ BlockClosure>>ifCurtailed:
 BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-17:23:24, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
+03:34:09 p.m., martes, 03 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
 
 Object>>doesNotUnderstand:
 UndefinedObject>>{unbound}doIt
@@ -65,12 +65,12 @@ ShellView>>performCommand:
 SmalltalkWorkspaceDocument(Shell)>>performCommand:
 CommandQuery>>perform
 DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
+[] in Toolbar(View)>>onCommand:
 BlockClosure>>ifCurtailed:
 BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-17:24:40, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
+03:40:55 p.m., martes, 03 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
 
 Object>>doesNotUnderstand:
 UndefinedObject>>{unbound}doIt
@@ -89,14 +89,19 @@ ShellView>>performCommand:
 SmalltalkWorkspaceDocument(Shell)>>performCommand:
 CommandQuery>>perform
 DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
+[] in Toolbar(View)>>onCommand:
 BlockClosure>>ifCurtailed:
 BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-17:26:43, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #verNombre')
+03:43:02 p.m., martes, 03 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('String does not understand #cr')
 
-Object>>doesNotUnderstand:
+String(Object)>>doesNotUnderstand:
+[] in UndefinedObject>>{unbound}doIt
+[] in SequenceableCollection>>collect:
+OrderedCollection>>uncheckedFrom:to:keysAndValuesDo:
+OrderedCollection(SequenceableCollection)>>keysAndValuesDo:
+OrderedCollection(SequenceableCollection)>>collect:
 UndefinedObject>>{unbound}doIt
 CompiledExpression>>value:
 SmalltalkWorkspace>>evaluateRange:ifFail:debug:
@@ -111,14 +116,105 @@ BlockClosure>>ensure:
 Command>>value
 ShellView>>performCommand:
 SmalltalkWorkspaceDocument(Shell)>>performCommand:
+----------------------------------------------------------------------------------------------------
+
+09:15:26 p.m., martes, 03 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Prompter class does not understand #promt:')
+
+Prompter class(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>inspectIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
 CommandQuery>>perform
 DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
+[] in Toolbar(View)>>onCommand:
 BlockClosure>>ifCurtailed:
 BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-17:26:50, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('String does not understand #verDireccion')
+09:16:41 p.m., martes, 03 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Prompter class does not understand #promt:')
+
+Prompter class(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>inspectIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+----------------------------------------------------------------------------------------------------
+
+09:17:22 p.m., martes, 03 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Prompter class does not understand #promt:')
+
+Prompter class(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>inspectIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+----------------------------------------------------------------------------------------------------
+
+09:33:32 p.m., martes, 03 de noviembre de 2020: Unhandled exception - a NotFoundError('Not found: [] in Remiseria>>buscarClienteCod:')
+
+OrderedCollection(Object)>>errorNotFound:
+[] in OrderedCollection(Collection)>>detect:
+OrderedCollection(Collection)>>detect:ifNone:
+OrderedCollection(Collection)>>detect:
+Remiseria>>buscarClienteCod:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>inspectIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+----------------------------------------------------------------------------------------------------
+
+04:41:31 p.m., miércoles, 04 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('String does not understand #ProfStef')
 
 String(Object)>>doesNotUnderstand:
 UndefinedObject>>{unbound}doIt
@@ -127,6 +223,7 @@ SmalltalkWorkspace>>evaluateRange:ifFail:debug:
 SmalltalkWorkspace>>evaluateItIfFail:debug:
 SmalltalkWorkspace>>evaluateItIfFail:
 SmalltalkWorkspace>>evaluateIt
+ProfStef(TutorialPlayer)>>evaluateIt
 Symbol>>forwardTo:
 CommandDescription>>performAgainst:
 [] in Command>>value
@@ -134,65 +231,16 @@ BlockClosure>>ifCurtailed:
 BlockClosure>>ensure:
 Command>>value
 ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
+ProfStef(Shell)>>performCommand:
 CommandQuery>>perform
 DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
+[] in LinkButton(View)>>onCommand:
 BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-17:29:26, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
+04:58:17 p.m., miércoles, 04 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('SmallInteger does not understand #asNumber')
 
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-17:30:33, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-17:32:09, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
+SmallInteger(Object)>>doesNotUnderstand:
 UndefinedObject>>{unbound}doIt
 CompiledExpression>>value:
 SmalltalkWorkspace>>evaluateRange:ifFail:debug:
@@ -209,86 +257,14 @@ ShellView>>performCommand:
 SmalltalkWorkspaceDocument(Shell)>>performCommand:
 CommandQuery>>perform
 DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
+[] in Toolbar(View)>>onCommand:
 BlockClosure>>ifCurtailed:
 BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-17:33:37, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
+05:34:36 p.m., martes, 10 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Recepcionista does not understand #choferesEnViaje')
 
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-17:34:41, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-17:35:07, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-17:37:21, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
+Recepcionista(Object)>>doesNotUnderstand:
 UndefinedObject>>{unbound}doIt
 CompiledExpression>>value:
 SmalltalkWorkspace>>evaluateRange:ifFail:debug:
@@ -305,976 +281,23 @@ ShellView>>performCommand:
 SmalltalkWorkspaceDocument(Shell)>>performCommand:
 CommandQuery>>perform
 DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
+[] in Toolbar(View)>>onCommand:
 BlockClosure>>ifCurtailed:
 BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-18:22:20, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #collect:')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>evaluateIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-18:22:30, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Remiseria does not understand #collect:')
-
-Remiseria(Object)>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>evaluateIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-18:25:32, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-18:27:07, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>evaluateIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-
-********************************************************************************
-************************** Dolphin Crash Dump Report ***************************
-
-18:38:41, 01/11/2020: Dolphin7.EXE caused an unhandled Win32 Exception A0000202
-at 765E9AB2 in module 764C0000 (C:\Windows\System32\KERNELBASE.dll)
-
-*----> Exception Parameters <----*
-00FFF000	@Ú;k:à795Ë
-00001000	
-01000000	pÜ:k:à795Ë@c; 
-
-*----> CPU Context for thread 0x2430 <----*
-EAX = 00C0F430 EBX = 01282000 ECX = 00000003
-ESI = 20040000 EDI = 00000000 EIP = 765E9AB2
-ESP = 00C0F430 EBP = 00C0F488 EFL = 00200216
-CS = 0023 SS = 002B DS = 002B
-ES = 002B FS = 0053 GS = 002B
-
-*----> VM Context <----*
-Process: {01280004:size 399 words, suspended frame 01280629, priority 6, callbacks 1
-last failure 0:nil, FPE mask 3, thread 00000000}
-Active Method: 10374C50 class>>crearChoferNom:dir:tel:dni:cod:reg:
-IP: 04C5CE88 (-7657704)
-SP: 0128060C
-BP: 012805DC (359)
-ActiveFrame: {012805F4: cf 012805B9, sp 00000000, bp 012805DC, ip 0, 10374C50 class>>crearChoferNom:dir:tel:dni:cod:reg:}
-	receiver: Chofer
-	arg[0]: 'enzo'
-	arg[1]: 'los pilares'
-	arg[2]: '123123123'
-	arg[3]: 40213123
-	arg[4]: '01'
-	arg[5]: 'profesional'
-
-
-New Method: Behavior>>new
-Message Selector: new
-
-*----> Stack Back Trace <----*
-{012805F4: cf 012805B9, sp 00000000, bp 012805DC, ip 0, 10374C50 class>>crearChoferNom:dir:tel:dni:cod:reg:}
-	receiver: Chofer
-	arg[0]: 'enzo'
-	arg[1]: 'los pilares'
-	arg[2]: '123123123'
-	arg[3]: 40213123
-	arg[4]: '01'
-	arg[5]: 'profesional'
-
-{012805B8: cf 01280585, sp 012805D4, bp 012805A0, ip 169, UndefinedObject>>**Non-symbol: 'doIt'**}
-	receiver: nil
-	stack temp[0]: 1
-	stack temp[1]: a Chofer
-	stack temp[2]: a Remiseria
-	stack temp[3]: nil
-	stack temp[4]: 3
-	stack temp[5]: nil
-
-{01280584: cf 01280565, sp 01280598, bp 01280580, ip 4, CompiledExpression>>value:}
-	receiver: a CompiledExpression
-	arg[0]: nil
-
-{01280564: cf 01280535, sp 01280578, bp 01280550, ip 28, SmalltalkWorkspace>>evaluateRange:ifFail:debug:}
-	receiver: a SmalltalkWorkspace
-	arg[0]: a Interval
-	arg[1]: [] @ 12 in SmalltalkWorkspace>>evaluateItIfFail:debug:
-	arg[2]: false
-	stack temp[0]: a CompilationResult
-	stack temp[1]: nil
-
-{01280534: cf 01280505, sp 01280548, bp 01280520, ip 18, SmalltalkWorkspace>>evaluateItIfFail:debug:}
-	receiver: a SmalltalkWorkspace
-	arg[0]: [] @ 9 in SmalltalkWorkspace>>inspectIt
-	arg[1]: false
-	stack temp[0]: a Interval
-	stack temp[1]: nil
-	stack temp[2]: nil
-
-{01280504: cf 012804E5, sp 01280518, bp 01280500, ip 4, SmalltalkWorkspace>>evaluateItIfFail:}
-	receiver: a SmalltalkWorkspace
-	arg[0]: [] @ 9 in SmalltalkWorkspace>>inspectIt
-
-{012804E4: cf 012804C9, sp 012804F8, bp 012804E4, ip 12, SmalltalkWorkspace>>inspectIt}
-	receiver: a SmalltalkWorkspace
-
-{012804C8: cf 012804A9, sp 012804DC, bp 012804C4, ip 4, Symbol>>forwardTo:}
-	receiver: inspectIt
-	arg[0]: a SmalltalkWorkspace
-
-{012804A8: cf 01280489, sp 012804BC, bp 012804A4, ip 4, CommandDescription>>performAgainst:}
-	receiver: a CommandDescription
-	arg[0]: a SmalltalkWorkspace
-
-{01280488: cf 01280465, sp 0128049C, bp 01280488, ip 14, [] in Command>>value}
-	receiver: a Command
-
-{01280464: cf 01280445, sp 01280478, bp 01280460, ip 18, BlockClosure>>ifCurtailed:}
-	receiver: [] @ 0 in nil
-	arg[0]: [] @ 17 in Command>>value
-
-{01280444: cf 01280421, sp 01280458, bp 0128043C, ip 3, BlockClosure>>ensure:}
-	receiver: [] @ 11 in Command>>value
-	arg[0]: [] @ 17 in Command>>value
-	stack temp[0]: nil
-
-{01280420: cf 01280405, sp 01280434, bp 01280420, ip 22, Command>>value}
-	receiver: a Command
-
-{01280404: cf 012803E5, sp 01280418, bp 01280400, ip 30, ShellView>>performCommand:}
-	receiver: a ShellView
-	arg[0]: a Command
-
-{012803E4: cf 012803C5, sp 012803F8, bp 012803E0, ip 4, SmalltalkWorkspaceDocument(Shell)>>performCommand:}
-	receiver: a SmalltalkWorkspaceDocument
-	arg[0]: a Command
-
-{012803C4: cf 0128039D, sp 012803D8, bp 012803B8, ip 10, CommandQuery>>perform}
-	receiver: a CommandQuery
-	stack temp[0]: a Command
-	stack temp[1]: nil
-	stack temp[2]: a SmalltalkWorkspaceDocument
-
-{0128039C: cf 01280379, sp 012803B0, bp 01280394, ip 8, DelegatingCommandPolicy(CommandPolicy)>>route:}
-	receiver: a DelegatingCommandPolicy
-	arg[0]: a CommandDescription
-	stack temp[0]: a CommandQuery
-
-{01280378: cf 01280351, sp 0128038C, bp 01280374, ip 15, [] in ScintillaView(View)>>onCommand:}
-	receiver: a ScintillaView
-
-{01280350: cf 01280331, sp 01280364, bp 0128034C, ip 18, BlockClosure>>ifCurtailed:}
-	receiver: [] @ 0 in nil
-	arg[0]: [] @ 18 in Cursor>>showWhile:
-
-{01280330: cf 0128030D, sp 01280344, bp 01280328, ip 3, BlockClosure>>ensure:}
-	receiver: [] @ 11 in View>>onCommand:
-	arg[0]: [] @ 18 in Cursor>>showWhile:
-	stack temp[0]: nil
-
-{0128030C: cf 012802E5, sp 01280320, bp 01280300, ip 27, Cursor>>showWhile:}
-	receiver: a Cursor
-	arg[0]: [] @ 11 in View>>onCommand:
-	stack temp[0]: nil
-	stack temp[1]: a ExternalHandle(00010005)
-
-{012802E4: cf 012802C1, sp 012802F8, bp 012802DC, ip 17, ScintillaView(View)>>onCommand:}
-	receiver: a ScintillaView
-	arg[0]: a CommandDescription
-	stack temp[0]: nil
-
-{012802C0: cf 0128028D, sp 012802D4, bp 012802A8, ip 19, ScintillaView(View)>>wmCommand:wParam:lParam:}
-	receiver: a ScintillaView
-	arg[0]: 273
-	arg[1]: 29510
-	arg[2]: 0
-	stack temp[0]: 29510
-	stack temp[1]: a CommandDescription
-	stack temp[2]: nil
-
-{0128028C: cf 0128025D, sp 012802A0, bp 01280278, ip 23, ScintillaView(View)>>dispatchMessage:wParam:lParam:}
-	receiver: a ScintillaView
-	arg[0]: 273
-	arg[1]: 29510
-	arg[2]: 0
-	stack temp[0]: nil
-	stack temp[1]: wmCommand:wParam:lParam:
-
-{0128025C: cf 01280229, sp 01280270, bp 0128024C, ip 70, [] in InputState>>wndProc:message:wParam:lParam:cookie:}
-	receiver: nil
-
-{01280228: cf 01280201, sp 0128023C, bp 01280224, ip 18, BlockClosure>>ifCurtailed:}
-	receiver: [] @ 0 in nil
-	arg[0]: [] @ 11 in ProcessorScheduler>>callback:evaluate:
-
-{01280200: cf 012801DD, sp 0128021C, bp 012801F8, ip 15, ProcessorScheduler>>callback:evaluate:}
-	receiver: a ProcessorScheduler
-	arg[0]: 6323630
-	arg[1]: [] @ 64 in InputState>>wndProc:message:wParam:lParam:cookie:
-
-{012801DC: cf 012801A1, sp 012801F0, bp 012801C4, ip 73, InputState>>wndProc:message:wParam:lParam:cookie:}
-	receiver: a InputState
-	arg[0]: 722388
-	arg[1]: 273
-	arg[2]: 29510
-	arg[3]: 0
-	arg[4]: 6323630
-	stack temp[0]: a ScintillaView
-
-{012801A0: cf 01280181, sp 012801BC, bp 0128019C, ip 28, InputState>>pumpMessage:}
-	receiver: a InputState
-	arg[0]: a MSG
-
-{01280180: cf 01280155, sp 01280194, bp 01280170, ip 18, InputState>>loopWhile:}
-	receiver: a InputState
-	arg[0]: [] @ 9 in InputState>>mainLoop
-	stack temp[0]: a MSG
-	stack temp[1]: true
-	stack temp[2]: nil
-
-{01280154: cf 01280139, sp 01280168, bp 01280154, ip 15, InputState>>mainLoop}
-	receiver: a InputState
-
-{01280138: cf 0128011D, sp 0128014C, bp 01280138, ip 14, [] in InputState>>forkMain}
-	receiver: a InputState
-
-{0128011C: cf 01280101, sp 01280130, bp 0128011C, ip 13, ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry}
-	receiver: a ExceptionHandler
-
-{01280100: cf 012800D9, sp 01280114, bp 012800FC, ip 22, [] in ExceptionHandler(ExceptionHandlerAbstract)>>try:}
-	receiver: a ExceptionHandler
-
-{012800D8: cf 012800B9, sp 012800EC, bp 012800D4, ip 18, BlockClosure>>ifCurtailed:}
-	receiver: [] @ 0 in nil
-	arg[0]: [] @ 39 in ExceptionHandlerAbstract>>try:
-
-{012800B8: cf 01280095, sp 012800CC, bp 012800B0, ip 3, BlockClosure>>ensure:}
-	receiver: [] @ 17 in ExceptionHandlerAbstract>>try:
-	arg[0]: [] @ 39 in ExceptionHandlerAbstract>>try:
-	stack temp[0]: nil
-
-{01280094: cf 0128006D, sp 012800A8, bp 01280088, ip 44, ExceptionHandler(ExceptionHandlerAbstract)>>try:}
-	receiver: a ExceptionHandler
-	arg[0]: [] @ 10 in InputState>>forkMain
-	stack temp[0]: nil
-	stack temp[1]: a Process('Main' base 01280000 [ACTIVE] in 10374C50 class>>crearChoferNom:dir:tel:dni:cod:reg: sp=00000000 ip=0 list=10050010)
-	env temp[0]: nil
-
-{0128006C: cf 01280049, sp 01280080, bp 01280064, ip 7, BlockClosure>>on:do:}
-	receiver: [] @ 10 in InputState>>forkMain
-	arg[0]: ProcessTermination
-	arg[1]: [] @ 13 in BlockClosure>>newProcess
-
-{01280048: cf 00000001, sp 0128005C, bp 01280048, ip 17, [] in BlockClosure>>newProcess}
-	receiver: [] @ 10 in InputState>>forkMain
-
-<Bottom of stack>
-
-*----> Stack <----*
-[0128060C: 371]-->Chofer
-[01280608: 370]-->9700078
-[01280604: 369]-->0
-[01280600: 368]-->0
-[012805FC: 367]-->9700060
-[012805F8: 366]-->0
-[012805F4: 365]-->10374C50 class>>crearChoferNom:dir:tel:dni:cod:reg:
-[012805F0: 364]-->'profesional'
-[012805EC: 363]-->'01'
-[012805E8: 362]-->40213123
-[012805E4: 361]-->'123123123'
-[012805E0: 360]-->'los pilares'
-[012805DC: 359]-->'enzo'
-[012805D8: 358]-->Chofer
-[012805D4: 357]-->3
-[012805D0: 356]-->1
-[012805CC: 355]-->9700048
-[012805C8: 354]-->9700074
-[012805C4: 353]-->168
-[012805C0: 352]-->9700034
-[012805BC: 351]-->0
-[012805B8: 350]-->a CompiledExpression
-[012805B4: 349]-->nil
-[012805B0: 348]-->3
-[012805AC: 347]-->nil
-[012805A8: 346]-->a Remiseria
-[012805A4: 345]-->a Chofer
-[012805A0: 344]-->1
-[0128059C: 343]-->nil
-[01280598: 342]-->9700032
-[01280594: 341]-->9700044
-[01280590: 340]-->3
-[0128058C: 339]-->9700018
-[01280588: 338]-->0
-[01280584: 337]-->CompiledExpression>>value:
-[01280580: 336]-->nil
-[0128057C: 335]-->a CompiledExpression
-[01280578: 334]-->9700008
-[01280574: 333]-->9700028
-[01280570: 332]-->27
-[0128056C: 331]-->9699994
-[01280568: 330]-->0
-[01280564: 329]-->SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-[01280560: 328]-->nil
-[0128055C: 327]-->a CompilationResult
-[01280558: 326]-->false
-[01280554: 325]-->[] @ 12 in SmalltalkWorkspace>>evaluateItIfFail:debug:
-[01280550: 324]-->a Interval
-[0128054C: 323]-->a SmalltalkWorkspace
-[01280548: 322]-->9699984
-[01280544: 321]-->9700004
-[01280540: 320]-->17
-[0128053C: 319]-->9699970
-[01280538: 318]-->a Context for: nil frame: 1280535
-[01280534: 317]-->SmalltalkWorkspace>>evaluateItIfFail:debug:
-[01280530: 316]-->nil
-[0128052C: 315]-->nil
-[01280528: 314]-->a Interval
-[01280524: 313]-->false
-[01280520: 312]-->[] @ 9 in SmalltalkWorkspace>>inspectIt
-[0128051C: 311]-->a SmalltalkWorkspace
-[01280518: 310]-->9699968
-[01280514: 309]-->9699980
-[01280510: 308]-->3
-[0128050C: 307]-->9699954
-[01280508: 306]-->0
-[01280504: 305]-->SmalltalkWorkspace>>evaluateItIfFail:
-[01280500: 304]-->[] @ 9 in SmalltalkWorkspace>>inspectIt
-[012804FC: 303]-->a SmalltalkWorkspace
-[012804F8: 302]-->9699954
-[012804F4: 301]-->9699964
-[012804F0: 300]-->11
-[012804EC: 299]-->9699940
-[012804E8: 298]-->a Context for: nil frame: 12804e5
-[012804E4: 297]-->SmalltalkWorkspace>>inspectIt
-[012804E0: 296]-->a SmalltalkWorkspace
-[012804DC: 295]-->9699938
-[012804D8: 294]-->9699950
-[012804D4: 293]-->3
-[012804D0: 292]-->9699924
-[012804CC: 291]-->0
-[012804C8: 290]-->Symbol>>forwardTo:
-[012804C4: 289]-->a SmalltalkWorkspace
-[012804C0: 288]-->inspectIt
-[012804BC: 287]-->9699922
-[012804B8: 286]-->9699934
-[012804B4: 285]-->3
-[012804B0: 284]-->9699908
-[012804AC: 283]-->0
-[012804A8: 282]-->CommandDescription>>performAgainst:
-[012804A4: 281]-->a SmalltalkWorkspace
-[012804A0: 280]-->a CommandDescription
-[0128049C: 279]-->9699908
-[01280498: 278]-->9699918
-[01280494: 277]-->13
-[01280490: 276]-->9699890
-[0128048C: 275]-->[] @ 11 in Command>>value
-[01280488: 274]-->Command>>value
-[01280484: 273]-->a Command
-[01280480: 272]-->[] @ 9 in BlockClosure>>ifCurtailed:
-[0128047C: 271]-->[] @ 11 in Command>>value
-[01280478: 270]-->9699888
-[01280474: 269]-->9699900
-[01280470: 268]-->17
-[0128046C: 267]-->9699874
-[01280468: 266]-->0
-[01280464: 265]-->BlockClosure>>ifCurtailed:
-[01280460: 264]-->[] @ 17 in Command>>value
-[0128045C: 263]-->[] @ 0 in nil
-[01280458: 262]-->9699870
-[01280454: 261]-->9699884
-[01280450: 260]-->2
-[0128044C: 259]-->9699856
-[01280448: 258]-->0
-[01280444: 257]-->BlockClosure>>ensure:
-[01280440: 256]-->nil
-[0128043C: 255]-->[] @ 17 in Command>>value
-[01280438: 254]-->[] @ 11 in Command>>value
-[01280434: 253]-->9699856
-[01280430: 252]-->9699866
-[0128042C: 251]-->21
-[01280428: 250]-->9699842
-[01280424: 249]-->0
-[01280420: 248]-->Command>>value
-[0128041C: 247]-->a Command
-[01280418: 246]-->9699840
-[01280414: 245]-->9699852
-[01280410: 244]-->29
-[0128040C: 243]-->9699826
-[01280408: 242]-->0
-[01280404: 241]-->ShellView>>performCommand:
-[01280400: 240]-->a Command
-[012803FC: 239]-->a ShellView
-[012803F8: 238]-->9699824
-[012803F4: 237]-->9699836
-[012803F0: 236]-->3
-[012803EC: 235]-->9699810
-[012803E8: 234]-->0
-[012803E4: 233]-->Shell>>performCommand:
-[012803E0: 232]-->a Command
-[012803DC: 231]-->a SmalltalkWorkspaceDocument
-[012803D8: 230]-->9699804
-[012803D4: 229]-->9699820
-[012803D0: 228]-->9
-[012803CC: 227]-->9699790
-[012803C8: 226]-->0
-[012803C4: 225]-->CommandQuery>>perform
-[012803C0: 224]-->a SmalltalkWorkspaceDocument
-[012803BC: 223]-->nil
-[012803B8: 222]-->a Command
-...
-<70 slots omitted>
-...
-[0128029C: 151]-->9699664
-[01280298: 150]-->22
-[01280294: 149]-->9699630
-[01280290: 148]-->0
-[0128028C: 147]-->View>>dispatchMessage:wParam:lParam:
-[01280288: 146]-->wmCommand:wParam:lParam:
-[01280284: 145]-->nil
-[01280280: 144]-->0
-[0128027C: 143]-->29510
-[01280278: 142]-->273
-[01280274: 141]-->a ScintillaView
-[01280270: 140]-->9699622
-[0128026C: 139]-->9699640
-[01280268: 138]-->69
-[01280264: 137]-->9699604
-[01280260: 136]-->[] @ 64 in InputState>>wndProc:message:wParam:lParam:cookie:
-[0128025C: 135]-->InputState>>wndProc:message:wParam:lParam:cookie:
-[01280258: 134]-->a ScintillaView
-[01280254: 133]-->29510
-[01280250: 132]-->273
-[0128024C: 131]-->0
-[01280248: 130]-->nil
-[01280244: 129]-->[] @ 9 in BlockClosure>>ifCurtailed:
-[01280240: 128]-->[] @ 64 in InputState>>wndProc:message:wParam:lParam:cookie:
-[0128023C: 127]-->9699602
-[01280238: 126]-->9699614
-[01280234: 125]-->17
-[01280230: 124]-->9699584
-[0128022C: 123]-->0
-[01280228: 122]-->BlockClosure>>ifCurtailed:
-[01280224: 121]-->[] @ 11 in ProcessorScheduler>>callback:evaluate:
-[01280220: 120]-->[] @ 0 in nil
-[0128021C: 119]-->6323630
-[01280218: 118]-->a ProcessorScheduler
-[01280214: 117]-->9699580
-[01280210: 116]-->9699598
-[0128020C: 115]-->14
-[01280208: 114]-->9699566
-[01280204: 113]-->0
-[01280200: 112]-->ProcessorScheduler>>callback:evaluate:
-[012801FC: 111]-->[] @ 64 in InputState>>wndProc:message:wParam:lParam:cookie:
-[012801F8: 110]-->6323630
-[012801F4: 109]-->a ProcessorScheduler
-[012801F0: 108]-->9699554
-[012801EC: 107]-->9699576
-[012801E8: 106]-->72
-[012801E4: 105]-->9699536
-[012801E0: 104]-->0
-[012801DC: 103]-->InputState>>wndProc:message:wParam:lParam:cookie:
-[012801D8: 102]-->a ScintillaView
-[012801D4: 101]-->6323630
-[012801D0: 100]-->0
-[012801CC: 99]-->29510
-[012801C8: 98]-->273
-[012801C4: 97]-->722388
-[012801C0: 96]-->a InputState
-[012801BC: 95]-->a MSG
-[012801B8: 94]-->a UserLibrary
-[012801B4: 93]-->9699534
-[012801B0: 92]-->9699550
-[012801AC: 91]-->27
-[012801A8: 90]-->9699520
-[012801A4: 89]-->0
-[012801A0: 88]-->InputState>>pumpMessage:
-[0128019C: 87]-->a MSG
-[01280198: 86]-->a InputState
-[01280194: 85]-->9699512
-[01280190: 84]-->9699530
-[0128018C: 83]-->17
-[01280188: 82]-->9699498
-[01280184: 81]-->0
-[01280180: 80]-->InputState>>loopWhile:
-[0128017C: 79]-->nil
-[01280178: 78]-->true
-[01280174: 77]-->a MSG
-[01280170: 76]-->[] @ 9 in InputState>>mainLoop
-[0128016C: 75]-->a InputState
-[01280168: 74]-->9699498
-[01280164: 73]-->9699508
-[01280160: 72]-->14
-[0128015C: 71]-->9699484
-[01280158: 70]-->0
-[01280154: 69]-->InputState>>mainLoop
-[01280150: 68]-->a InputState
-[0128014C: 67]-->9699484
-[01280148: 66]-->9699494
-[01280144: 65]-->13
-[01280140: 64]-->9699470
-[0128013C: 63]-->[] @ 10 in InputState>>forkMain
-[01280138: 62]-->InputState>>forkMain
-[01280134: 61]-->a InputState
-[01280130: 60]-->9699470
-[0128012C: 59]-->9699480
-[01280128: 58]-->12
-[01280124: 57]-->9699456
-[01280120: 56]-->a Context for: nil frame: 128011d
-[0128011C: 55]-->ExceptionHandlerAbstract>>markAndTry
-[01280118: 54]-->a ExceptionHandler
-[01280114: 53]-->9699454
-[01280110: 52]-->9699466
-[0128010C: 51]-->21
-[01280108: 50]-->9699436
-[01280104: 49]-->[] @ 17 in ExceptionHandlerAbstract>>try:
-[01280100: 48]-->ExceptionHandlerAbstract>>try:
-[012800FC: 47]-->a Process('Main' base 01280000 [ACTIVE] in 10374C50 class>>crearChoferNom:dir:tel:dni:cod:reg: sp=00000000 ip=0 list=10050010)
-[012800F8: 46]-->a ExceptionHandler
-[012800F4: 45]-->[] @ 9 in BlockClosure>>ifCurtailed:
-[012800F0: 44]-->[] @ 17 in ExceptionHandlerAbstract>>try:
-[012800EC: 43]-->9699434
-[012800E8: 42]-->9699446
-[012800E4: 41]-->17
-[012800E0: 40]-->9699420
-[012800DC: 39]-->0
-[012800D8: 38]-->BlockClosure>>ifCurtailed:
-[012800D4: 37]-->[] @ 39 in ExceptionHandlerAbstract>>try:
-[012800D0: 36]-->[] @ 0 in nil
-[012800CC: 35]-->9699416
-[012800C8: 34]-->9699430
-[012800C4: 33]-->2
-[012800C0: 32]-->9699402
-[012800BC: 31]-->0
-[012800B8: 30]-->BlockClosure>>ensure:
-[012800B4: 29]-->nil
-[012800B0: 28]-->[] @ 39 in ExceptionHandlerAbstract>>try:
-[012800AC: 27]-->[] @ 17 in ExceptionHandlerAbstract>>try:
-[012800A8: 26]-->9699396
-[012800A4: 25]-->9699412
-[012800A0: 24]-->43
-[0128009C: 23]-->9699382
-[01280098: 22]-->a Context for: nil frame: 1280095
-[01280094: 21]-->ExceptionHandlerAbstract>>try:
-[01280090: 20]-->a Process('Main' base 01280000 [ACTIVE] in 10374C50 class>>crearChoferNom:dir:tel:dni:cod:reg: sp=00000000 ip=0 list=10050010)
-[0128008C: 19]-->nil
-[01280088: 18]-->[] @ 10 in InputState>>forkMain
-[01280084: 17]-->a ExceptionHandler
-[01280080: 16]-->9699378
-[0128007C: 15]-->9699392
-[01280078: 14]-->6
-[01280074: 13]-->9699364
-[01280070: 12]-->0
-[0128006C: 11]-->BlockClosure>>on:do:
-[01280068: 10]-->[] @ 13 in BlockClosure>>newProcess
-[01280064: 9]-->ProcessTermination
-[01280060: 8]-->[] @ 10 in InputState>>forkMain
-[0128005C: 7]-->9699364
-[01280058: 6]-->9699374
-[01280054: 5]-->16
-[01280050: 4]-->0
-[0128004C: 3]-->[] @ 9 in BlockClosure>>newProcess
-[01280048: 2]-->BlockClosure>>newProcess
-[01280044: 1]-->[] @ 10 in InputState>>forkMain
-<Bottom of stack>
-
-***** End of crash report *****
-
-18:54:40, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-18:55:06, domingo, 1 de noviembre de 2020: Unhandled exception - an InvalidFormat('Invalid format for Number')
-
-Number class>>errorInvalidFormat
-Number class>>fromString:
-String>>asNumber
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-----------------------------------------------------------------------------------------------------
-
-18:57:07, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Cliente class does not understand #crearClienteNom:dir:tel:dni:cod:reg:')
-
-Cliente class(Object)>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-19:15:08, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-19:32:17, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #agregarCliente:')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-19:33:08, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #agregarCliente:')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-19:34:39, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #agregarCliente:')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-19:36:23, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #agregarCliente:')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>evaluateIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-19:40:16, domingo, 1 de noviembre de 2020: Unhandled exception - an InvalidFormat('Invalid format for Number')
-
-Number class>>errorInvalidFormat
-Number class>>fromString:
-String>>asNumber
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-----------------------------------------------------------------------------------------------------
-
-19:46:59, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #todosLosClientes')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-19:48:05, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #todosLosClientes')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-19:49:34, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-19:53:09, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-20:04:06, domingo, 1 de noviembre de 2020: Unhandled exception - a NotFoundError('Not found: herramienta de impacto')
+07:02:51 p.m., viernes, 13 de noviembre de 2020: Unhandled exception - a NotFoundError('Not found: 1')
 
 Dictionary(Object)>>errorNotFound:
 Dictionary>>errorKeyNotFound:
 Dictionary>>at:
+Agenda>>cantidadViajesXdia
 UndefinedObject>>{unbound}doIt
 CompiledExpression>>value:
 SmalltalkWorkspace>>evaluateRange:ifFail:debug:
 SmalltalkWorkspace>>evaluateItIfFail:debug:
 SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
+SmalltalkWorkspace>>evaluateIt
 Symbol>>forwardTo:
 CommandDescription>>performAgainst:
 [] in Command>>value
@@ -1285,20 +308,21 @@ ShellView>>performCommand:
 SmalltalkWorkspaceDocument(Shell)>>performCommand:
 CommandQuery>>perform
 DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
 ----------------------------------------------------------------------------------------------------
 
-20:10:18, domingo, 1 de noviembre de 2020: Unhandled exception - a NotFoundError('Not found: pavo')
+07:37:57 p.m., viernes, 13 de noviembre de 2020: Unhandled exception - a NotFoundError('Not found: [] in Remiseria>>choferDisponible')
 
-Dictionary(Object)>>errorNotFound:
-Dictionary>>errorKeyNotFound:
-Dictionary>>at:
+OrderedCollection(Object)>>errorNotFound:
+[] in OrderedCollection(Collection)>>detect:
+OrderedCollection(Collection)>>detect:ifNone:
+OrderedCollection(Collection)>>detect:
+Remiseria>>choferDisponible
 UndefinedObject>>{unbound}doIt
 CompiledExpression>>value:
 SmalltalkWorkspace>>evaluateRange:ifFail:debug:
 SmalltalkWorkspace>>evaluateItIfFail:debug:
 SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
+SmalltalkWorkspace>>evaluateIt
 Symbol>>forwardTo:
 CommandDescription>>performAgainst:
 [] in Command>>value
@@ -1308,35 +332,9 @@ Command>>value
 ShellView>>performCommand:
 SmalltalkWorkspaceDocument(Shell)>>performCommand:
 CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
 ----------------------------------------------------------------------------------------------------
 
-20:10:22, domingo, 1 de noviembre de 2020: Unhandled exception - a NotFoundError('Not found: pavo')
-
-Dictionary(Object)>>errorNotFound:
-Dictionary>>errorKeyNotFound:
-Dictionary>>at:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-----------------------------------------------------------------------------------------------------
-
-20:47:07, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
+08:03:58 p.m., viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
 
 Object>>doesNotUnderstand:
 UndefinedObject>>{unbound}doIt
@@ -1344,6 +342,103 @@ CompiledExpression>>value:
 SmalltalkWorkspace>>evaluateRange:ifFail:debug:
 SmalltalkWorkspace>>evaluateItIfFail:debug:
 SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+----------------------------------------------------------------------------------------------------
+
+08:29:39 p.m., viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('TranscriptShell does not understand #,')
+
+TranscriptShell(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+----------------------------------------------------------------------------------------------------
+
+08:30:57 p.m., viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('TranscriptShell does not understand #,')
+
+TranscriptShell(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+----------------------------------------------------------------------------------------------------
+
+22:07:16, viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('TranscriptShell does not understand #showAllColorSymbol')
+
+TranscriptShell(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+Compiler class>>evaluate:for:evaluationPools:logged:ifFail:
+Compiler class>>evaluate:for:evaluationPools:logged:
+Compiler class>>evaluate:for:logged:
+[] in ChunkSourceFiler>>fileIn
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+ChunkSourceFiler>>fileIn
+SourceManager>>fileInFrom:
+[] in SourceManager>>fileIn:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+SourceManager>>fileIn:
+[] in RefactoringSmalltalkSystem(SmalltalkSystem)>>fileFileIn
+BlockClosure>>ifCurtailed:
+----------------------------------------------------------------------------------------------------
+
+22:22:15, viernes, 13 de noviembre de 2020: Unhandled exception - an Error('This method did not compile')
+
+Cliente(Object)>>error:
+Cliente(Viaje class)>>crearViajeCod:dia:hora:destino:import:cli:cho:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
 SmalltalkWorkspace>>inspectIt
 Symbol>>forwardTo:
 CommandDescription>>performAgainst:
@@ -1357,12 +452,83 @@ CommandQuery>>perform
 DelegatingCommandPolicy(CommandPolicy)>>route:
 [] in ScintillaView(View)>>onCommand:
 BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-20:50:50, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
+22:23:44, viernes, 13 de noviembre de 2020: Unhandled exception - an Error('This method did not compile')
 
-Object>>doesNotUnderstand:
+Cliente(Object)>>error:
+Cliente(Viaje class)>>crearViajeCod:dia:hora:destino:import:cli:cho:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>inspectIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in ScintillaView(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+----------------------------------------------------------------------------------------------------
+
+22:25:25, viernes, 13 de noviembre de 2020: Unhandled exception - a NotFoundError('Not found: 3')
+
+ListView(Object)>>errorNotFound:
+[] in ListView(ListControlView)>>objectFromHandle:
+ListModel(SequenceableCollection)>>at:ifAbsent:
+ListView(ListControlView)>>objectFromHandle:ifAbsent:
+ListView(ListControlView)>>objectFromHandle:
+[] in ListView(ListControlView)>>selections
+[] in SequenceableCollection>>collect:
+Array(SequenceableCollection)>>uncheckedFrom:to:keysAndValuesDo:
+Array(SequenceableCollection)>>keysAndValuesDo:
+Array(SequenceableCollection)>>collect:
+ListView(ListControlView)>>selections
+ListPresenter(SelectableItemsPresenter)>>selections
+MethodBrowser(SelectableItemsPresenter)>>selections
+MethodBrowser>>queryCommand:
+DelegatingCommandPolicy(CommandPolicy)>>queryCommand:ofTarget:
+[] in DelegatingCommandPolicy(CommandPolicy)>>queryCommand:
+OrderedCollection>>do:
+DelegatingCommandPolicy(CommandPolicy)>>queryCommand:
+DelegatingCommandPolicy(CommandPolicy)>>query:
+ToolbarIconButton(ToolbarButton)>>validateUserInterface:
+----------------------------------------------------------------------------------------------------
+
+22:31:27, viernes, 13 de noviembre de 2020: Unhandled exception - an Error('This method did not compile')
+
+Cliente(Object)>>error:
+Cliente(Viaje class)>>crearViajeCod:dia:hora:destino:import:cli:cho:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>inspectIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in ScintillaView(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+----------------------------------------------------------------------------------------------------
+
+22:37:26, viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Viaje class does not understand #crearViajeCod:dia:hora:destino:import:cli:cho:')
+
+Viaje class(Object)>>doesNotUnderstand:
 UndefinedObject>>{unbound}doIt
 CompiledExpression>>value:
 SmalltalkWorkspace>>evaluateRange:ifFail:debug:
@@ -1384,9 +550,10 @@ BlockClosure>>ifCurtailed:
 BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-20:51:29, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
+22:40:10, viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Viaje does not understand #iniViajeCod:dia:hora:destino:import:cli:cho:')
 
-Object>>doesNotUnderstand:
+Viaje(Object)>>doesNotUnderstand:
+Viaje class>>crearViajeCod:dia:hora:destino:import:cli:cho:
 UndefinedObject>>{unbound}doIt
 CompiledExpression>>value:
 SmalltalkWorkspace>>evaluateRange:ifFail:debug:
@@ -1405,370 +572,9 @@ CommandQuery>>perform
 DelegatingCommandPolicy(CommandPolicy)>>route:
 [] in ScintillaView(View)>>onCommand:
 BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-20:53:18, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-21:01:54, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-22:58:43, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-22:59:36, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:06:31, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:19:00, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Libro class does not understand #crearLibrolsbn:tit:aut:edit:')
-
-Libro class(Object)>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:19:16, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Libro class does not understand #crearLibrolsbn:tit:aut:edit:')
-
-Libro class(Object)>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:21:46, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:24:54, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('String does not understand #verTelefono')
-
-String(Object)>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:25:30, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('String does not understand #verTelefono')
-
-String(Object)>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:26:53, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:27:51, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:32:39, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:33:34, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:38:36, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:49:05, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Remiseria does not understand #buscarChoferNom')
+22:43:40, viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Remiseria does not understand #collect:')
 
 Remiseria(Object)>>doesNotUnderstand:
 UndefinedObject>>{unbound}doIt
@@ -1792,297 +598,9 @@ BlockClosure>>ifCurtailed:
 BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-23:50:40, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
+22:43:54, viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Remiseria does not understand #collect:')
 
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:51:22, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:57:00, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-23:59:24, domingo, 1 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('FlipperInspector does not understand #appendToStream:')
-
-FlipperInspector(Object)>>doesNotUnderstand:
-WriteStream>>nextPutAll:
-[] in TranscriptShell>>nextPutAll:
-[] in Mutex>>critical:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Mutex>>critical:
-TranscriptShell>>nextPutAll:
-TranscriptShell>>show:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>evaluateIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-00:00:24, lunes, 2 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-00:00:50, lunes, 2 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-00:02:28, lunes, 2 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-00:08:08, lunes, 2 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-00:09:54, lunes, 2 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-00:11:43, lunes, 2 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-00:12:48, lunes, 2 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-00:13:56, lunes, 2 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
-UndefinedObject>>{unbound}doIt
-CompiledExpression>>value:
-SmalltalkWorkspace>>evaluateRange:ifFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:debug:
-SmalltalkWorkspace>>evaluateItIfFail:
-SmalltalkWorkspace>>inspectIt
-Symbol>>forwardTo:
-CommandDescription>>performAgainst:
-[] in Command>>value
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-Command>>value
-ShellView>>performCommand:
-SmalltalkWorkspaceDocument(Shell)>>performCommand:
-CommandQuery>>perform
-DelegatingCommandPolicy(CommandPolicy)>>route:
-[] in ScintillaView(View)>>onCommand:
-BlockClosure>>ifCurtailed:
-BlockClosure>>ensure:
-----------------------------------------------------------------------------------------------------
-
-00:15:18, lunes, 2 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
-
-Object>>doesNotUnderstand:
+Remiseria(Object)>>doesNotUnderstand:
 UndefinedObject>>{unbound}doIt
 CompiledExpression>>value:
 SmalltalkWorkspace>>evaluateRange:ifFail:debug:
@@ -2104,9 +622,81 @@ BlockClosure>>ifCurtailed:
 BlockClosure>>ensure:
 ----------------------------------------------------------------------------------------------------
 
-00:16:08, lunes, 2 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #asNumber')
+22:52:37, viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Remiseria does not understand #collect:')
 
-Object>>doesNotUnderstand:
+Remiseria(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>inspectIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in ScintillaView(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+----------------------------------------------------------------------------------------------------
+
+23:13:31, viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Remiseria does not understand #collect:')
+
+Remiseria(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>inspectIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in ScintillaView(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+----------------------------------------------------------------------------------------------------
+
+23:14:46, viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Remiseria does not understand #select:')
+
+Remiseria(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>inspectIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in ScintillaView(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+----------------------------------------------------------------------------------------------------
+
+23:16:17, viernes, 13 de noviembre de 2020: Unhandled exception - a MessageNotUnderstood('Remiseria does not understand #reject:')
+
+Remiseria(Object)>>doesNotUnderstand:
 UndefinedObject>>{unbound}doIt
 CompiledExpression>>value:
 SmalltalkWorkspace>>evaluateRange:ifFail:debug:
